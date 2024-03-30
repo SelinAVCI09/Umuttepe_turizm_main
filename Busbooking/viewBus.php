@@ -288,7 +288,23 @@ button
 
         </button>
 
-        </td></tr>
+        </td>
+
+        <td>
+
+        <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
+          <a href="seats.html?id=<?php echo $row['id'];?>">
+         
+          koltuk ayarla
+          
+
+
+          </a>
+
+        </button>
+
+        </td>
+      </tr>
 
 <?php
        }
