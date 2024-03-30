@@ -17,7 +17,6 @@ session_start();
 </head>
 <body>
 
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -287,8 +286,20 @@ button
           </a>
 
         </button>
+        </td>
+        <td>
+        <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
+          <a href="seats.html?id=<?php echo $row['id'];?>">
+         
+          
+          
+          Koltuk Görüntüle
+          
+          </a>
 
-        </td></tr>
+        </button>
+       </td>
+        </tr>
 
 <?php
        }
