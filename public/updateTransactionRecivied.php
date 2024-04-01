@@ -10,9 +10,6 @@
 <head>
 	<title>admin Panel suraksha</title>
 </head>
-<body>
-
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>

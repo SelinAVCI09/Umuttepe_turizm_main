@@ -273,23 +273,10 @@ button
           
         ?>
 
-        <td>
-
-        <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
-          <a href="AddBooking.php?id=<?php echo $row['id'];?>">
-         
-          
-          
-
-          Book Now
-
-          </a>
-
-        </button>
-        </td>
+        
         <td>
         <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
-          <a href="seats.html?id=<?php echo $row['id'];?>">
+          <a href="seats.php?id=<?php echo $row['id'];?>">
          
           
           
