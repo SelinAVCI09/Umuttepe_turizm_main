@@ -354,7 +354,7 @@ foreach ($seats as $seat) {
     // Her koltuk için HTML içeriği oluştur
     echo "<div class='input_wrap'>";
     echo "<label for='seatNumber'>Koltuk No</label>";
-    echo "<input type='text' id='seatNumberInput' name='seatNumber' value='$seatNumber' required>";
+    echo "<input type='text' id='seatNumberInput' name='seatNumber' value='".($seatNumber ?:'') ."' required>";
     echo "</div>";
 
     echo "<div class='input_wrap'>";
