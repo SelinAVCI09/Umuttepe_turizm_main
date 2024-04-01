@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>EZfare Login</title>
+    <title>Umuttepe Turizm</title>
     <link rel="stylesheet" href="cssfile/nav.css">
     <link rel="stylesheet" href="cssfile/footer_l.css">
     <!--  <link rel="stylesheet" type="text/css" href="cssfile/container.css">-->
@@ -121,15 +121,15 @@ session_start();
 <!------------------------------------------------------------------>
  <div class="login-box">
     <img src="image/avatar.png" class="avatar">
-        <h1>Login For EZfare</h1>
+        <h1>Umuttepe turizm </h1>
             <form method="post">
-            <p>Username</p>
-            <input type="text" name="user_name" placeholder="Enter Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
+            <p>Kullanıcı adı</p>
+            <input type="text" name="user_name" placeholder="Kullanıcı adınızı giriniz">
+            <p>Şifre</p>
+            <input type="password" name="password" placeholder="Şifrenizi giriniz">
             <input type="submit" name="login" value="Login">
-            <a href="signUp.php" class="sign_up">sign up</a>&nbsp&nbsp&nbsp
-            <a href="#">Forget Password</a>    
+            <a href="signUp.php" class="sign_up">Giriş Yapın</a>&nbsp&nbsp&nbsp
+              
             </form>
         
         

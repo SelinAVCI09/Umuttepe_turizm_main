@@ -396,13 +396,13 @@ li a:hover{
   
           <!-- body part my account code -->
           
-          <div class="usern"><b><font color="#fff"> Hello !!! <?php echo $user_data['username'];?></font></b></div>
+          <div class="usern"><b><font color="#fff"> Merhaba!!! <?php echo $user_data['username'];?></font></b></div>
             <div class="wrapper">
               <div class="left">
                   <img src="image/Re.png"alt="user" width="200">
-                  <button class="btn4">Upload image </button><br>
+                  
                   <br>
-                  <a href="viewBus.php"><button class="btn4">Home </button></a>
+                  <a href="viewBus.php"><button class="btn4">Ana sayfa </button></a>
               </div>
               </div>
 
@@ -412,20 +412,20 @@ li a:hover{
         <div class="right">
 
                   
-           <h3>Account Information</h3><hr/><br/>  
-                <p>User name:- <?php echo $user_data['username'];?>   </p><br>
+           <h3>Hesap Bilgileri</h3><hr/><br/>  
+                <p>Kullanıcı Adı:- <?php echo $user_data['username'];?>   </p><br>
                 <p>Email:- <?php echo $user_data['email'];?> </p>
                 <br>
-                <p>First name:-<?php echo $user_data['First_Name'];?></p><br>
-                <p>Last name:-<?php echo $user_data['Last_Name'];?></p><br>
+                <p>İsiminşz:-<?php echo $user_data['First_Name'];?></p><br>
+                <p>Soyisiminiz:-<?php echo $user_data['Last_Name'];?></p><br>
                 
-                <h3>LOGOUT & SECURITY</h3><hr/><br>
+                <h3>Çıkış/Güvenlik</h3><hr/><br>
                 <br><a href="updateProfile.php?id=<?php echo $user_data['id'];?>">
-                <button class="btn3">Update</button></a>
+                <button class="btn3">Güncelle</button></a>
                 <a href="logout.php">
-                <button class="btn3">Logout</button></a>
+                <button class="btn3">Çıkış</button></a>
                 <a href="deleteProfile.php?id=<?php echo $user_data['id'];?>">
-                <button class="btn3">Delete</button></a>
+                <button class="btn3">Sil</button></a>
          </div>
           <!--
          <div class="nxdiv">

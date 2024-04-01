@@ -124,28 +124,28 @@ session_start();
 
             <div class="col">
 
-                <h3 class="title">payment</h3>
+                <h3 class="title">Ödeme İşlemleri</h3>
 
                 <div class="inputBox">
-                    <span>cards accepted :</span>
+                    <span>Kart kabul edildi :</span>
                     <img src="image/card_img.png" alt="">
                 </div>
                 <div class="inputBox">
-                    <span>name on card :</span>
+                    <span>Kart ismi :</span>
                     <input type="text" placeholder="mr. john deo" name="cardName" required>
                 </div>
                 <div class="inputBox">
-                    <span>credit card number :</span>
+                    <span>Kredi kartı numarası :</span>
                     <input type="number" placeholder="1111-2222-3333-4444" name="cardNumber" required>
                 </div>
                 <div class="inputBox">
-                    <span>exp month :</span>
+                    <span>Bitiş Ayı:</span>
                     <input type="text" placeholder="january" name="expM" required>
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
-                        <span>exp year :</span>
+                        <span>Bitiş Yılı :</span>
                         <input type="number" placeholder="2022" name="expYear" required>
                     </div>
                     <div class="inputBox">

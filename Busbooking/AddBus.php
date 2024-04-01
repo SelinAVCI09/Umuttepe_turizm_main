@@ -24,7 +24,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Routes adding</title>
+  <title>Rota</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -87,7 +87,7 @@
 
      <li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
     <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
-    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
+    <li><a href="BookingManage.php">Rezerve insanlar</a></li>
     <li><a href="PaymentManage.php">Transfer</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
@@ -144,7 +144,7 @@
               $stmt->execute();
               
                                  echo ("<script LANGUAGE='JavaScript'>
-                      window.alert('Başarılı bir şekilde sefer eklendi!!!');
+                      window.alert('Succesfully Bus Added!!!');
                       window.location.href='ManagesBuses.php';
                       </script>");
                
@@ -180,7 +180,7 @@
 
 
         <div class="input_wrap">
-          <label for="title">Telefon</label>
+          <label for="title">Telephone</label>
           <input type="text" id="title" name="tel" placeholder="Tel" required>
         </div>
 

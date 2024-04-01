@@ -77,12 +77,12 @@
  <div class="login-box">
     <img src="image/avatar.png" class="avatar">
 
-            <h1>Admin Login</h1>
+            <h1>Admin Girişi</h1>
             <form method="POST">
-                    <p>Username</p>
-                    <input type="text" name="Admin_username" placeholder="Enter Username">
-                    <p>Password</p>
-                    <input type="password" name="Admin_password" placeholder="Enter Password">
+                    <p>Kullanıcı Adınız</p>
+                    <input type="text" name="Admin_username" placeholder="Kullanıcı adınızı giriniz">
+                    <p>Şifre</p>
+                    <input type="password" name="Admin_password" placeholder="Şifreyi giriniz">
                     <input type="submit" name="login" value="Login">
                   <!--  <a href="signUp.php" class="sign_up">sign up</a>&nbsp&nbsp&nbsp
                     <a href="#">Forget Password</a>    -->

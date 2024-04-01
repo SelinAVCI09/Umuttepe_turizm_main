@@ -17,7 +17,6 @@ session_start();
 </head>
 <body>
 
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -161,9 +160,9 @@ button
 
 
 
-    <li><a href="viewBus.php">Ticket Booking</a></li>
-    <li><a href="profile.php">Profile</a></li>
-    <li><a href="logout.php">logout</a></li>
+    <li><a href="viewBus.php">Bilet Rezervasyonu</a></li>
+    <li><a href="profile.php">Profil</a></li>
+    <li><a href="logout.php">Çıkış</a></li>
     
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -188,7 +187,7 @@ button
 <div class="sidebar2">
 
 
-    <h1 class="adminTopic">Get Your Ticket...</h1>
+    <h1 class="adminTopic">Bilet işlemleri...</h1>
 
 
 
@@ -261,7 +260,8 @@ button
      $email=$_POST['email'];
      $board_place=$_POST['board_place'];
      $desti=$_POST['Your_destination'];
-    
+     $gender=$_GET['gender'];
+     $seat=$_GET['seat'];
 
     
 
@@ -274,10 +274,11 @@ button
           {
 
 
-              $stmt=$conn->prepare("INSERT INTO booking(passenger_name,telephone,email,boarding_place,Your_destination) VALUES(?,?,?,?,?)");
+              $stmt=$conn->prepare("INSERT INTO booking (passenger_name, telephone, email, boarding_place, Your_destination, gender, seat) VALUES(?,?,?,?,?,?,?)");
+
               //table3 is the table name//
 
-              $stmt->bind_param("sssss",$passenger,$tel,$email,$board_place,$desti);
+              $stmt->bind_param("sssssss",$passenger,$tel,$email,$board_place,$desti,$gender,$seat);
 
               $stmt->execute();
               
@@ -313,13 +314,13 @@ button
       <div class="form_wrap">
         
         <div class="input_wrap">
-          <label for="title">Passenger Name</label>
+          <label for="title">Yolcu Adı</label>
           <input type="text" id="title" name="passenger_name" placeholder="Passenger Name" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Telephone</label>
+          <label for="title">Telefon</label>
           <input type="text" id="title" name="tel" placeholder="Tel" required>
         </div>
 
@@ -329,14 +330,41 @@ button
         </div>
 
         <div class="input_wrap">
-          <label for="title">Board Place</label>
+          <label for="title">Kalkış Noktası</label>
           <input type="text" id="title" name="board_place" placeholder="board place" required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Your destination</label>
+          <label for="title">Varış Noktası</label>
           <input type="text" id="title" name="Your_destination" placeholder="Your destination" required>
         </div>
+
+        <?php
+// URL parametrelerini al
+$seats = explode(",", $_GET['seat']);
+
+// Cinsiyet bilgisini al, eğer belirtilmemişse null olarak ata
+$gender = isset($_GET['gender']) ? $_GET['gender'] : null;
+
+// Her koltuk için bilgileri yazdır
+foreach ($seats as $seat) {
+    // Koltuk numarasını al
+    $seatNumber = $seat;
+
+    // Her koltuk için HTML içeriği oluştur
+    echo "<div class='input_wrap'>";
+    echo "<label for='seatNumber'>Koltuk No</label>";
+    echo "<input type='text' id='seatNumberInput' name='seatNumber' value='$seatNumber' required>";
+    echo "</div>";
+
+    echo "<div class='input_wrap'>";
+    echo "<label for='gender'>Cinsiyet</label>";
+    echo "<input type='text' id='genderInput' name='gender' value='" . ($gender ?: '') . "' required>";
+    echo "</div>";
+}
+?>
+
+
 
 
         <div class="input_wrap">

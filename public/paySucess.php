@@ -34,17 +34,17 @@
             </div>
             <div class="alert">
                 <i class="fa-solid fa-circle-check ico"></i>
-                <h3>Payment Successful !!!</h3>
+                <h3>Ödeme başarılı !!!</h3>
             </div>
             <div class="alert-content alert">
-                Your Payment is Successfull and thank you for geting ticket from us. 
+                Ödemeniz başarılı.Bizi tercih ettiğinşz için teşekkürler
             </div>
             <div class="alert"><a href="viewBus.php">
                 <button type="button" class="button">
                     <i class="fa-solid fa-eye"></i>
-                    Ok
+                    Tamam
                 </button></a><a href="viewBus.php">
-                <button type="button" onclick="Close()" class="dismiss-btn" id="close">Dismiss</button></a>
+                <button type="button" onclick="Close()" class="dismiss-btn" id="close">Kapat</button></a>
             </div>
         </div>
     </div>

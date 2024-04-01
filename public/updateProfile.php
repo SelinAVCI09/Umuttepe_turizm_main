@@ -18,7 +18,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Suraksha Insurance solutions</title>
+    <title>Çözümler</title>
     <link rel="stylesheet" href="cssfile/nav.css">
   <!--  <link rel="stylesheet" href="cssfile/footer_l.css">-->
      <link rel="stylesheet" href="cssfile/signUp.css">
@@ -129,19 +129,19 @@ body{
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-      Update Your  EZfare Profile
+      Profilinizi güncelleyin
     </div>
 
     <form action="#" method="POST">
       <div class="form_wrap">
         <div class="input_grp">
           <div class="input_wrap">
-            <label for="fname">First Name</label>
+            <label for="fname">İsminiz</label>
             <input type="text" id="fname" name="fname" placeholder="First Name" required>
           </div>
 
           <div class="input_wrap">
-            <label for="lname">Last Name</label>
+            <label for="lname">Soyisminiz</label>
             <input type="text" id="lname" name="lname" placeholder="Last Name" >
           </div>
         </div>
@@ -152,15 +152,15 @@ body{
         </div>
 
         <div class="input_wrap">
-          <label for="email">Email Address</label>
+          <label for="email">Email Adresiniz</label>
           <input type="text" id="email" name="email" placeholder="E-mail" required>
         </div>
         <div class="input_wrap">
-          <label for="uname">Username</label>
+          <label for="uname">Kullanıcı Adınız</label>
           <input type="text" id="uname" name="user_name" placeholder="Username" required>
         </div>
         <div class="input_wrap">
-          <label for="password">Password</label>
+          <label for="password">Şifreniz</label>
           <input type="password" id="password" name="password" placeholder="password" required>
         </div>
         

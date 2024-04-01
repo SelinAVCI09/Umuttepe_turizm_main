@@ -141,12 +141,12 @@
              
 
 
-                  <h1 class="home_details">Your Bus Pass.Anytime. <br><font class="font">Anywhere..</font>
+                  <h1 class="home_details">İstediğiniz zaman otobüs <br><font class="font">Her yerde....</font>
 
                   <br>
 
 
-                       <a href="signUp.php">     <button class="btnHome">SIGN UP NOW</button></a>
+                       <a href="signUp.php">     <button class="btnHome">Kayıt olun...</button></a>
 
 
 

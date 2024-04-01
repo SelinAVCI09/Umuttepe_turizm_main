@@ -28,7 +28,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <title>user view packages Suraksha</title>
+  <title></title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -148,9 +148,9 @@ button
 <ul>
 
 
-    <li><a href="viewBus.php">Ticket Booking</a></li>
-    <li><a href="profile.php">Profile</a></li>
-    <li><a href="logout.php">logout</a></li>
+    <li><a href="viewBus.php">Bilet Rezervi</a></li>
+    <li><a href="profile.php">Profil</a></li>
+    <li><a href="logout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Service</a></li>
@@ -174,7 +174,7 @@ button
 <div class="sidebar2">
 
 
-    <h1 class="adminTopic">Booking Your Ticket...</h1>
+    <h1 class="adminTopic">Rezerv İşlemleri</h1>
 
 
 
@@ -273,23 +273,10 @@ button
           
         ?>
 
-        <td>
-
-        <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
-          <a href="AddBooking.php?id=<?php echo $row['id'];?>">
-         
-          
-          
-
-          Book Now
-
-          </a>
-
-        </button>
-        </td>
+        
         <td>
         <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
-          <a href="seats.html?id=<?php echo $row['id'];?>">
+          <a href="seats.php?id=<?php echo $row['id'];?>">
          
           
           

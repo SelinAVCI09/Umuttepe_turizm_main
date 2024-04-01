@@ -28,7 +28,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel of Bus Services</title>
+  <title>Admin Paneli</title>
   <!--cdn icon library -->
   
 	<style type="text/css">
@@ -147,11 +147,11 @@ button
 <ul>
 
 
-    <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
+<li><a href="adminDash.php">Rota Kontrolü</a></li>
+    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
+    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
     <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
+    <li><a href="adminLogout.php">Çıkış</a></li>
     
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -176,7 +176,7 @@ button
 <div class="sidebar2">
 
 
-		<h1 class="adminTopic">Manage Route of Buses</h1>
+		<h1 class="adminTopic">Otobüs Kontrolü</h1>
 
 
 
@@ -230,7 +230,7 @@ button
           
           
 
-          Update
+         Güncelle
 
           </a>
 
@@ -241,7 +241,7 @@ button
         <button style = "border:2px solid yellow; border-radius:7px; background-color:red;color:white;" >
           <a href="deleteRoute.php?id=<?php echo $row['id'];?>">
 
-            Delete
+           Sil
 
         </a>
        </button>
@@ -259,7 +259,7 @@ button
 <br>
 
 
-                       <a href="Addroute.php">     <button class="btnPolicy">Add Route</button></a>
+                       <a href="Addroute.php">     <button class="btnPolicy">Rota ekle</button></a>
 
 
 

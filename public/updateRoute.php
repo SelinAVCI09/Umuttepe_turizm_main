@@ -11,8 +11,6 @@
 	<title>admin Panel suraksha</title>
 </head>
 <body>
-
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -24,7 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel Suraksha</title>
+  <title>Admin Panel </title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -94,12 +92,11 @@
 
 
    
-    <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
+<li><a href="adminDash.php">Rota Kontrolü</a></li>
+    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
+    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
     <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
-    
+    <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Service</a></li>
@@ -192,36 +189,36 @@
         </div>
         
         <div class="input_wrap">
-          <label for="title">Via_city</label>
+          <label for="title">Kalkış</label>
           <input type="text" id="title" name="Via_city" placeholder="Via_city" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Destination</label>
+          <label for="title">İniş</label>
           <input type="text" id="title" name="destination" placeholder="Destination" required>
         </div>
 
          <div class="input_wrap">
-          <label for="title">Bus Name</label>
+          <label for="title">Otobüs adı</label>
           <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
         </div>
 
 
          <div class="input_wrap">
-          <label for="title">Departure Date</label>
+          <label for="title">Çıkış Tarihi</label>
           <input type="Date" id="title" name="departure_date" placeholder="Departure Date" class="idclass">
         </div>
 
 
          <div class="input_wrap">
-          <label for="title">Departure Time</label>
+          <label for="title">Çıkış zamanı</label>
           <input type="Time" id="title" name="departure_time" placeholder="Departure Time" class="idclass">
         </div>
 
 
           <div class="input_wrap">
-          <label for="title">Cost</label>
+          <label for="title">ÜCRET</label>
           <input type="number" id="title" name="cost" placeholder="Cost" class="idclass">
         </div>
 

@@ -10,9 +10,6 @@
 <head>
 	<title>admin Panel suraksha</title>
 </head>
-<body>
-
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -24,7 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel Suraksha</title>
+  <title>Admin Paneli</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -94,11 +91,11 @@
 
 
    
-    <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
+<li><a href="adminDash.php">Rota Kontrolü</a></li>
+    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
+    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
     <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
+    <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Service</a></li>
@@ -188,7 +185,7 @@
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-    Update Passenger Booking...
+  Kullanıcı rezervasyonunu güncelle
     </div>
 
     <form action="#" method="POST">
@@ -217,12 +214,12 @@
         </div>
 
         <div class="input_wrap">
-          <label for="title">Board Place</label>
+          <label for="title">Kalkış yeri</label>
           <input type="text" id="title" name="board_place" placeholder="board place" required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Your destination</label>
+          <label for="title">İniş Yeri</label>
           <input type="text" id="title" name="Your_destination" placeholder="Your destination" required>
         </div>
 

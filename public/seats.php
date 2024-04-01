@@ -1,4 +1,8 @@
+<?php 
 
+	session_start();
+
+?><?php include("connection.php")?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -69,7 +73,7 @@ ol {
   padding: 5px;
   position: relative;
 }
-.seat:nth-child(3) {
+.seat:nth-child(2) {
   margin-right: 14.28571428571429%;
 }
 .seat input[type=checkbox] {
@@ -223,15 +227,7 @@ ol {
             </li>
             <li class="seat">
               <input type="checkbox" disabled id="1D" />
-              <label for="1D">Occupied</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="1E" />
-              <label for="1E">1E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="1F" />
-              <label for="1F">1F</label>
+              <label for="1D">1D</label>
             </li>
           </ol>
         </li>
@@ -253,14 +249,6 @@ ol {
               <input type="checkbox" id="2D" />
               <label for="2D">2D</label>
             </li>
-            <li class="seat">
-              <input type="checkbox" id="2E" />
-              <label for="2E">2E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="2F" />
-              <label for="2F">2F</label>
-            </li>
           </ol>
         </li>
         <li class="row row--3">
@@ -280,14 +268,6 @@ ol {
             <li class="seat">
               <input type="checkbox" id="3D" />
               <label for="3D">3D</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="3E" />
-              <label for="3E">3E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="3F" />
-              <label for="3F">3F</label>
             </li>
           </ol>
         </li>
@@ -309,14 +289,6 @@ ol {
               <input type="checkbox" id="4D" />
               <label for="4D">4D</label>
             </li>
-            <li class="seat">
-              <input type="checkbox" id="4E" />
-              <label for="4E">4E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="4F" />
-              <label for="4F">4F</label>
-            </li>
           </ol>
         </li>
         <li class="row row--5">
@@ -336,14 +308,6 @@ ol {
             <li class="seat">
               <input type="checkbox" id="5D" />
               <label for="5D">5D</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="5E" />
-              <label for="5E">5E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="5F" />
-              <label for="5F">5F</label>
             </li>
           </ol>
         </li>
@@ -365,14 +329,6 @@ ol {
               <input type="checkbox" id="6D" />
               <label for="6D">6D</label>
             </li>
-            <li class="seat">
-              <input type="checkbox" id="6E" />
-              <label for="6E">6E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="6F" />
-              <label for="6F">6F</label>
-            </li>
           </ol>
         </li>
         <li class="row row--7">
@@ -392,14 +348,6 @@ ol {
             <li class="seat">
               <input type="checkbox" id="7D" />
               <label for="7D">7D</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="7E" />
-              <label for="7E">7E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="7F" />
-              <label for="7F">7F</label>
             </li>
           </ol>
         </li>
@@ -421,14 +369,6 @@ ol {
               <input type="checkbox" id="8D" />
               <label for="8D">8D</label>
             </li>
-            <li class="seat">
-              <input type="checkbox" id="8E" />
-              <label for="8E">8E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="8F" />
-              <label for="8F">8F</label>
-            </li>
           </ol>
         </li>
         <li class="row row--9">
@@ -448,14 +388,6 @@ ol {
             <li class="seat">
               <input type="checkbox" id="9D" />
               <label for="9D">9D</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="9E" />
-              <label for="9E">9E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="9F" />
-              <label for="9F">9F</label>
             </li>
           </ol>
         </li>
@@ -477,21 +409,128 @@ ol {
               <input type="checkbox" id="10D" />
               <label for="10D">10D</label>
             </li>
-            <li class="seat">
-              <input type="checkbox" id="10E" />
-              <label for="10E">10E</label>
-            </li>
-            <li class="seat">
-              <input type="checkbox" id="10F" />
-              <label for="10F">10F</label>
-            </li>
           </ol>
         </li>
       </ol>
       <div class="fuselage">
-        
+        <div>
+          <li class="seat">
+          <input type="checkbox" id="male" name="gender" value="male">
+          <label for="male">Erkek</label>
+        </li>
+        </div>
+        <div>
+          <li class="seat">
+          <input type="checkbox" id="female" name="gender" value="female">
+          <label for="female">Kadın</label>
+        </li>
+        </div>
+        <div class="fuselage"></div>
+    <button id="bookButton">Rezervasyon Yap</button>
       </div>
     </div>
+    <script>
+  const maleCheckbox = document.getElementById('male');
+  const femaleCheckbox = document.getElementById('female');
+  const seats = document.querySelectorAll('.seat input[type="checkbox"]');
+  const bookButton = document.getElementById('bookButton');
+
+  // Yardımcı fonksiyon: Koltuk numarasından sıra ve sütun bilgisini alır
+  function getSeatInfo(seatId) {
+    const match = seatId.match(/(\d+)([A-Z])/);
+    return {
+      row: parseInt(match[1]),
+      column: match[2]
+    };
+  }
+
+  // Yardımcı fonksiyon: Verilen iki koltuk numarasının yan yana olup olmadığını kontrol eder
+  function areSeatsAdjacent(seatId1, seatId2) {
+    const seat1Info = getSeatInfo(seatId1);
+    const seat2Info = getSeatInfo(seatId2);
+    // Yan yana olup olmadığını kontrol etmek için sıra numaralarını ve sütun harflerini karşılaştırıyoruz
+    return (
+      Math.abs(seat1Info.row - seat2Info.row) === 0 && // Aynı sıra
+      Math.abs(seat1Info.column.charCodeAt(0) - seat2Info.column.charCodeAt(0)) === 1 // Yan yana sütunlar
+    );
+  }
+
+  maleCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+      femaleCheckbox.checked = false;
+      seats.forEach(seat => {
+        seat.addEventListener('change', function() {
+          if (this.checked) {
+            this.parentElement.style.background = 'blue';
+            const selectedGender = document.querySelector('input[name="gender"]:checked');
+            if (selectedGender && selectedGender.value === 'female' && areSeatsAdjacent('1B', '1C')) {
+              alert('Kadın ve erkek yan yana oturamaz!');
+            }
+          } else {
+            this.parentElement.style.background = 'greenyellow';
+          }
+        });
+      });
+    }
+  });
+
+  femaleCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+      maleCheckbox.checked = false;
+      seats.forEach(seat => {
+        seat.addEventListener('change', function() {
+          if (this.checked) {
+            this.parentElement.style.background = 'pink';
+            const selectedGender = document.querySelector('input[name="gender"]:checked');
+            if (selectedGender && selectedGender.value === 'male' && areSeatsAdjacent('1B', '1C')) {
+              alert('Kadın ve erkek yan yana oturamaz!');
+            }
+          } else {
+            this.parentElement.style.background = 'greenyellow';
+          }
+        });
+      });
+    }
+  });
+
+  // Butona tıklandığında formu gönder
+// Butona tıklandığında formu gönder
+bookButton.addEventListener('click', function() {
+    const selectedSeat = document.querySelector('.seat input[type="checkbox"]:checked');
+    if (!selectedSeat) {
+        alert('Lütfen bir koltuk seçin.');
+        return;
+    }
+
+    const selectedGender = document.querySelector('input[name="gender"]:checked').value;
+
+    // Form oluştur
+    const form = document.createElement('form');
+    form.method = 'GET'; // GET metoduyla gönderim yapılacak
+    form.action = 'AddBooking.php'; // Formun gönderileceği dosya
+
+    // Koltuk ve cinsiyeti gizli alan olarak forma ekle
+    const seatInput = document.createElement('input');
+    seatInput.type = 'hidden';
+    seatInput.name = 'seat'; 
+    seatInput.value = selectedSeat.id;
+    form.appendChild(seatInput);
+
+    const genderInput = document.createElement('input');
+    genderInput.type = 'hidden';
+    genderInput.name = 'gender';
+    genderInput.value = selectedGender;
+    form.appendChild(genderInput);
+
+    // Formu sayfaya ekleyerek gönder
+    document.body.appendChild(form);
+    form.submit();
+});
+
+
+</script>
+
+  
   </body>
 
   </html>
