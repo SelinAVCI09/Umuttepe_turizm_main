@@ -27,7 +27,7 @@
             <!-- body part my entervcode -->
 
       <div class="wrapper">
-        <h2>HELP CENTER</h2>
+        <h2>Yardım </h2>
       <div class="line"><br><br><br><br>
       </div>
       </div>
@@ -36,10 +36,8 @@
             <div class="help">
          <i class="fa fa-search"></i></div>
         <span></span>
-             <h3><b>Customer Support<b></h3><br><br>
-      <p>
+             <h3><b>Kullanıcı desteği<b></h3><br><br>
 
-        We help you to make your<br> journey better.</p>
       </div>
 
 
@@ -47,7 +45,7 @@
             <div class="help">
       <i class="fa fa-headphones"></i></div>
       <span></span>
-             <h3><b>More Choices<b></h3><br><br>
+             <h3><b>Daha fazla işlemler<b></h3><br><br>
       <p>
 
         We give you maximum choices across<br> all the routes to choose your bus.</p>

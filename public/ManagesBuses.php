@@ -137,11 +137,11 @@ button
 
 
    
-    <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
+<li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
+    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
+    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
+    <li><a href="PaymentManage.php">Transfer</a></li>
+    <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Service</a></li>
@@ -165,7 +165,7 @@ button
 <div class="sidebar2">
 
 
-		<h1 class="adminTopic">Manage Buses</h1>
+		<h1 class="adminTopic">Rotanızı ayarlayın</h1>
 
 
 
@@ -208,7 +208,7 @@ button
           
           
 
-          Update
+         Güncelle
 
           </a>
 
@@ -219,7 +219,7 @@ button
         <button style = "border:2px solid yellow; border-radius:7px; background-color:red;color:white;" >
           <a href="deleteBus.php?id=<?php echo $row['id'];?>">
 
-            Delete
+            Sil
 
         </a>
        </button>

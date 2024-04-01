@@ -12,18 +12,18 @@
 	<div class="carousel-cell" style="background-image: url(image/1.jpg);">
 		<div class="overlay"></div>
 		<div class="inner">
-			<h3 class="subtitle">Choose your Bus</h3>
-			<h2 class="title">Enjoy your tour with our best facility...</h2>
-			<a href="home.php" class="btn">Go to Home</a>
+			<h3 class="subtitle">Otobüsünüzü seçin</h3>
+			<h2 class="title">sizin için en iyisi</h2>
+			<a href="home.php" class="btn">Ana Sayfaya git</a>
 		</div>
 	</div>
 
 	<div class="carousel-cell" style="background-image: url(image/2.jpg);">
 		<div class="overlay"></div>
 		<div class="inner">
-			<h3 class="subtitle">Ticket Booking</h3>
-			<h2 class="title">Booking your Ticket Fastly via Online...</h2>
-			<a href="home.php" class="btn">Go to Home</a>
+		<h3 class="subtitle">Otobüsünüzü seçin</h3>
+			<h2 class="title">sizin için en iyisi</h2>
+			<a href="home.php" class="btn">na Sayfaya git</a>
 		</div>
 	</div>
 
@@ -32,7 +32,7 @@
 		<div class="inner">
 			<h3 class="subtitle">Ac</h3>
 			<h2 class="title">Ac Non Ac facility on your preference...</h2>
-			<a href="home.php" class="btn">Go to Home</a>
+			<a href="home.php" class="btn">na Sayfaya git</a>
 		</div>
 	</div>
 </div>

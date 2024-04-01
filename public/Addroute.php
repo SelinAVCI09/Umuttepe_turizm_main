@@ -22,7 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Routes adding</title>
+  <title>Rota Ekleme</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -82,11 +82,11 @@
 </header>
 <ul>
 
- <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
+ <li><a href="adminDash.php">Rota Kontrolü</a></li>
+    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
+    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
     <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
+    <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Service</a></li>
@@ -141,7 +141,7 @@
 
               $stmt->execute();
               
-               echo '<script type="text/javascript">alert("Route add successfully")</script>';
+               echo '<script type="text/javascript">alert("Rota başarılı bir şekilde eklenmiştir.")</script>';
                
 
 
@@ -162,40 +162,40 @@
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-      Routes adding
+      Rota Ekleme
     </div>
 
     <form action="#" method="POST">
       <div class="form_wrap">
         
         <div class="input_wrap">
-          <label for="title">Via City</label>
+          <label for="title">Nereden</label>
           <input type="text" id="title" name="via_city" placeholder="Via_city" required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Destination</label>
+          <label for="title">Nereye</label>
           <input type="text" id="title" name="destination" placeholder="Destination" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Bus Name</label>
+          <label for="title">Otobüs Adı</label>
           <input type="text" id="title" name="bus_name" placeholder="Bus Name"  required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Departure Date</label>
+          <label for="title">Çıkış tarihi</label>
           <input type="date" id="title" name="departure_date" placeholder="Date of Departure" class="idclass" required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Departure Time</label>
+          <label for="title">Çıkış Zamanı</label>
           <input type="Time" id="title" name="departure_time" placeholder="Time of Departure" class="idclass" required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Cost</label>
+          <label for="title">Fİyat</label>
           <input type="text" id="title" name="cost" placeholder="Cost" class="idclass" required>
         </div>
         

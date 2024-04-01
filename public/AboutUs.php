@@ -197,8 +197,8 @@ table tr td button:hover
             <img src="image/bus2.jpg">
         </div>
         <div class="about-intro">
-            <h3>About Us<span style="color: #00b894;"> !</h3>
-            <p>We, eToursLanka (Pvt) Ltd. who is pioneer of Online Bus Ticket Booking Service in Sri Lanka since 2010. In this segment the company has launch a web site www.NZfare.LK with the collaboration of NTC/CTB registered Busses in Sri Lanka.</p>
+            <h3>Hakkımızda<span style="color: #00b894;"> !</h3>
+            <p> Sizin için en iyisi</p>
         </div>
     </div>
 
@@ -207,7 +207,7 @@ table tr td button:hover
 
 <?php include("connection.php");?>
 
-<h1 class="topic_bus"> ...Our Buses...</h1>
+<h1 class="topic_bus"> ...Otobüslerimiz...</h1>
 
 <?php
 
@@ -250,7 +250,7 @@ table tr td button:hover
 
 
 ?>
-<h1 class="topic_bus"> ...Our Route Services...</h1>
+<h1 class="topic_bus"> ...Rota servislerimiz...</h1>
 
 <?php
 
@@ -312,11 +312,9 @@ table tr td button:hover
         </div>
         <div class="about-intro">
            
-            <p>Plan your trip, reserve bus tickets, andarrive at your destination</p>
-            <p>We offer a complete online bus booking platform where you can buy and sell bus seats. The traveler can purchase bus tickets online, and in exchange, a text message with travel details will be delivered to confirm the seat reservation.
-            </p>
-            <p>Plan your journey ahead of time, save time buying bus tickets, avoid lengthy lines, discover your boarding location quickly, and enjoy your joyous journey in comfort using Ezfare's efficient bus reservation system
-            </p>
+            <p>Gezinisi birlikte planlayalım</p>
+            <p>Hem ucuz hem konforlu... </p>
+           
 
 
         </div>

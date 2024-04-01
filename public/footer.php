@@ -5,7 +5,7 @@
 
                     <div class="socialInfo">
                         <div class="mainTitle">
-                            <h4> Follow Us <span></span></h4>
+                            <h4> Bizi takip edin <span></span></h4>
                         </div>
                         <div class="socialItem">
                             <div class="socialLink facebook">

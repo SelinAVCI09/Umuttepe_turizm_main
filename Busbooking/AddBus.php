@@ -1,6 +1,6 @@
 <?php 
 
-	session_start();
+    session_start();
 
 ?>
 <?php include("connection.php")?>
@@ -8,9 +8,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>admin Panel suraksha</title>
+    <title>admin Panel suraksha</title>
 </head>
 <body>
+
+
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -22,42 +24,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel </title>
+  <title>Rota</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
 <link rel="stylesheet" href="cssfile/signUp.css">
-	<style type="text/css">
+    <style type="text/css">
 
-			body{
+            body{
 
-		  background-image: url("image/20.jpg");
-		  background-position: center;
-		  background-size: cover;
-		  height: 700px;
-		  background-repeat: no-repeat;
+          background-image: url("image/20.jpg");
+          background-position: center;
+          background-size: cover;
+          height: 700px;
+          background-repeat: no-repeat;
       background-attachment: fixed;
 
-		}
-		.adminTopic{
-			text-align: center;
-			color: #fff;
-			
+        }
+        .adminTopic{
+            text-align: center;
+            color: #fff;
+            
 
-		}
+        }
     .form_wrap .submit_btn:hover{
 
       color:#fff;
       font-weight: 600;
 
-    }
-    #decription{
-      width: 100%;
-      border-radius: 3px;
-      border: 1px solid #9597a6;
-      padding: 10px;
-      outline: none;
-      color: black;
     }
     .idclass{
 
@@ -73,7 +67,7 @@
 
 
 
-	</style>
+    </style>
 </head>
 <body>
   <input type="checkbox" id="check">
@@ -91,10 +85,10 @@
 <ul>
 
 
-<li><a href="adminDash.php">Rota Kontrolü</a></li>
-    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
-    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
+     <li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
+    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
+    <li><a href="BookingManage.php">Rezerve insanlar</a></li>
+    <li><a href="PaymentManage.php">Transfer</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -114,85 +108,73 @@
 
 </div>
 
-  <?php 
 
 
-      
+<div class="sidebar2">
 
-       if(isset($_POST['BusUpdate'])){
 
-       $id=$_POST['id'];
+        <?php 
+
+
+  if(isset($_POST['AddBus'])){
+
+     
+       //$id=$_POST['id'];
        $nameOFbus=$_POST['bus_name'];
        $tel=$_POST['tel'];
        
+    
 
-       $query="UPDATE `bus` SET Bus_Name='$nameOFbus',tel='$tel' where id=$id";
+    
 
 
-       $query_run=mysqli_query($conn,$query);
+       if($conn->connect_error)
+          {
+            die('Connection Failed :'.$conn->connect_error);
+          }
+          else
+          {
 
-      
-  
 
-         if($query_run){
+              $stmt=$conn->prepare("INSERT INTO bus(Bus_Name,Tel) VALUES(?,?)");
+              //table3 is the table name//
 
-            /*
-      
-                    //redirect to your profile page//
+              $stmt->bind_param("ss", $nameOFbus,$tel);
 
-                    header("Location: adminDash.php");
-       
-                    die;
-
-                 
-*/
-           
+              $stmt->execute();
+              
                                  echo ("<script LANGUAGE='JavaScript'>
-                      window.alert('Succesfully Bus updated!!!');
+                      window.alert('Succesfully Bus Added!!!');
                       window.location.href='ManagesBuses.php';
                       </script>");
                
 
 
-          }
-
-          else{
-
-               echo '<script type="text/javascript">alert("Not Updated!!!")</script>';
-           }
-
-           
-
-     }
-
-?>
-
-
+              
+              $stmt->close();
+              $conn->close();
+              }
+                
+          
+      }     
   
 
-   
+   ?>
 
-
-<div class="sidebar2">
 
 
 
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-      Otobüs Update/Edit
+      Otobüs Ekleme
     </div>
 
     <form action="#" method="POST">
       <div class="form_wrap">
-
-        <div class="input_wrap">
-          <label for="title">Id</label>
-          <input type="number" id="title" name="id" class="idclass" value="<?php echo $_GET['id'];?>">
-        </div>
         
         <div class="input_wrap">
-          <label for="title">Bus Name</label>
+          <label for="title">Otobüs adı</label>
           <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
         </div>
 
@@ -202,10 +184,8 @@
           <input type="text" id="title" name="tel" placeholder="Tel" required>
         </div>
 
-       
         <div class="input_wrap">
-
-          <input type="submit" value="Update Bus Now" class="submit_btn" name="BusUpdate">
+          <input type="submit" value="Add Bus Now" class="submit_btn" name="AddBus">
 
         </div>
 

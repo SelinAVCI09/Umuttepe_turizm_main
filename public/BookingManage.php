@@ -29,7 +29,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Booking Manage</title>
+  <title>Rezerv İşlemleri</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -154,11 +154,11 @@ button
     <li><a href="PaymentManage.php">Payment Manage</a></li>
     <li><a href="profile.php">Profile</a></li>-->
 
-    <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
+    <li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
+    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
+    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
+    <li><a href="PaymentManage.php">Transfer</a></li>
+    <li><a href="adminLogout.php">Çıkış</a></li>
    
   <!--  <li><a href="logout.php">logout</a></li>-->
   <!--  <li><a href="#">Event</a></li>
@@ -184,7 +184,7 @@ button
 <div class="sidebar2">
 
 
-    <h1 class="adminTopic">Booking Peoples...</h1>
+    <h1 class="adminTopic">Rezerve edilmiş insanlar</h1>
 
 
 
@@ -237,7 +237,7 @@ button
           
           
 
-          Update
+          Güncelle
 
           </a>
 
@@ -252,7 +252,7 @@ button
           
           
 
-          Delete
+          Sil
 
           </a>
 

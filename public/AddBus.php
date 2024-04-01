@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<<<<<<< HEAD
+
+=======
+
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -84,11 +88,11 @@
 <ul>
 
 
-     <li><a href="adminDash.php">Manage Routes</a></li>
-    <li><a href="ManagesBuses.php">Manage Buses</a></li>
-    <li><a href="BookingManage.php">Booking People</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
-    <li><a href="adminLogout.php">logout</a></li>
+     <li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
+    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
+    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
+    <li><a href="PaymentManage.php">Transfer</a></li>
+    <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Service</a></li>
@@ -143,7 +147,7 @@
               $stmt->execute();
               
                                  echo ("<script LANGUAGE='JavaScript'>
-                      window.alert('Succesfully Bus Added!!!');
+                      window.alert('Başarılı bir şekilde sefer eklendi!!!');
                       window.location.href='ManagesBuses.php';
                       </script>");
                
@@ -166,20 +170,20 @@
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-      Bus adding
+      Otobüs Ekleme
     </div>
 
     <form action="#" method="POST">
       <div class="form_wrap">
         
         <div class="input_wrap">
-          <label for="title">Bus Name</label>
+          <label for="title">Otobüs adı</label>
           <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Telephone</label>
+          <label for="title">Telefon</label>
           <input type="text" id="title" name="tel" placeholder="Tel" required>
         </div>
 

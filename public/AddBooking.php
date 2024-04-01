@@ -160,9 +160,9 @@ button
 
 
 
-    <li><a href="viewBus.php">Ticket Booking</a></li>
-    <li><a href="profile.php">Profile</a></li>
-    <li><a href="logout.php">logout</a></li>
+    <li><a href="viewBus.php">Bilet Rezervasyonu</a></li>
+    <li><a href="profile.php">Profil</a></li>
+    <li><a href="logout.php">Çıkış</a></li>
     
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -187,7 +187,7 @@ button
 <div class="sidebar2">
 
 
-    <h1 class="adminTopic">Get Your Ticket...</h1>
+    <h1 class="adminTopic">Bilet işlemleri...</h1>
 
 
 
@@ -314,13 +314,13 @@ button
       <div class="form_wrap">
         
         <div class="input_wrap">
-          <label for="title">Passenger Name</label>
+          <label for="title">Yolcu Adı</label>
           <input type="text" id="title" name="passenger_name" placeholder="Passenger Name" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Telephone</label>
+          <label for="title">Telefon</label>
           <input type="text" id="title" name="tel" placeholder="Tel" required>
         </div>
 
@@ -330,12 +330,12 @@ button
         </div>
 
         <div class="input_wrap">
-          <label for="title">Board Place</label>
+          <label for="title">Kalkış Noktası</label>
           <input type="text" id="title" name="board_place" placeholder="board place" required>
         </div>
 
         <div class="input_wrap">
-          <label for="title">Your destination</label>
+          <label for="title">Varış Noktası</label>
           <input type="text" id="title" name="Your_destination" placeholder="Your destination" required>
         </div>
 

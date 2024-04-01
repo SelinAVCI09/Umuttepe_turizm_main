@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EZfare login menu</title>
+	<title>Umuttepe turizm</title>
 
 
 
