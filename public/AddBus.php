@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<<<<<<< HEAD
+
+=======
 
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
