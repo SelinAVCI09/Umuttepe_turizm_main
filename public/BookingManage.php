@@ -17,7 +17,6 @@ session_start();
 </head>
 <body>
 
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -198,11 +197,10 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>Passenger Name</th>
+    <th>Kullanıcı Adı</th>
     <th>Tel</th>
     <th>E-mail</th>
-    <th>Boarding Place</th>
-    <th>His/Her Destination</th>
+    <th>Rota ID</th>
     <th>Update</th>
     <th>Delete</th>
 
@@ -221,9 +219,7 @@ button
         echo "</td><td>";
         echo $row['email'];
         echo "</td><td>";
-        echo $row['boarding_place'];
-        echo "</td><td>";
-        echo $row['Your_destination'];
+        echo $row['route_id'];
         echo "</td>";
        
           

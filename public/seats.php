@@ -2,9 +2,19 @@
 session_start();
 include("connection.php");
 
-// Veritabanından dolu koltukları çek
-$sql = "SELECT seat, gender FROM booking";
-$result = $conn->query($sql);
+// Diğer sayfadan gelen id değerini al
+if (isset($_GET['id'])) {
+    $routeId = $_GET['id'];
+} else {
+    echo "id değeri belirtilmemiş.";
+}
+
+// Veritabanından dolu koltukları oturum kimliği ile çek
+$sql = "SELECT seat, gender FROM booking WHERE route_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $routeId);
+$stmt->execute();
+$result = $stmt->get_result();
 
 // Dolu koltukları saklamak için bir dizi oluştur
 $bookedSeats = [];
@@ -14,6 +24,7 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -239,7 +250,7 @@ ol {
 
 
     <div class="plane">
-        <h1>Selecionar lugar</h1>
+        <h1>Koltuk Seçiniz</h1>
       <div class="fuselage">
         
  
@@ -268,7 +279,7 @@ ol {
                     $disabled = isset($bookedSeats[$seat]);
                     $gender = isset($bookedSeats[$seat]) ? $bookedSeats[$seat] : "";
                     $color = $gender == "male" ? "blue" : ($gender == "female" ? "pink" : "greenyellow");
-                    echo "<li class='seat'>";
+                    echo "<li class='seat' data-gender='$gender'>";
                     echo "<input type='checkbox' id='$seat' " . ($disabled ? "disabled" : "") . " />";
                     echo "<label for='$seat' style='background:$color'>" . $seat . "</label>";
                     echo "</li>";
@@ -279,106 +290,134 @@ ol {
             ?>
             <br>
                 <button style="border:8px solid red; border-radius:10px; background-color:red;color:white;" id="bookButton">Bilet Al</button>
-         
-    <script>
-        const maleCheckbox = document.getElementById('male');
-        const femaleCheckbox = document.getElementById('female');
-        const seats = document.querySelectorAll('.seat input[type="checkbox"]');
-        const bookButton = document.getElementById('bookButton');
+<script>
+    const bookedSeats = <?php echo json_encode($bookedSeats); ?>;
 
-        // Yardımcı fonksiyon: Koltuk numarasından sıra ve sütun bilgisini alır
-        function getSeatInfo(seatId) {
-          const match = seatId.match(/(\d+)([A-Z])/);
-          return {
+    // Koltuk seçme işlemi
+    document.querySelectorAll('.seat input[type="checkbox"]').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            var selectedSeat = this.id;
+            var selectedGender = this.parentElement.dataset.gender;
+
+            // Seçilen koltuğun yanındaki koltuğun cinsiyetini kontrol et
+            var adjacentSeat = checkAdjacentSeat(selectedSeat, selectedGender);
+            if (!adjacentSeat) {
+                // Yanındaki koltuk uygun değilse, seçimi iptal et
+                this.checked = false;
+                alert("Hata: Seçtiğiniz koltuk ve yanındaki koltuk cinsiyet uyumsuz.");
+            }
+        });
+    });
+
+    // Dolu koltukların yanındaki koltukların cinsiyetini kontrol etme işlevi
+    function checkAdjacentSeat(seatId, gender) {
+        // Koltuk numarasından sıra ve sütun bilgisini al
+        var seatInfo = getSeatInfo(seatId);
+        var row = seatInfo.row;
+        var column = seatInfo.column;
+
+        // Yanındaki koltukların sıra ve sütun numaralarını oluştur
+        var adjacentSeats = [
+            (row - 1) + column, // Üstteki koltuk
+            (row + 1) + column, // Altındaki koltuk
+            row + String.fromCharCode(column.charCodeAt(0) - 1), // Soldaki koltuk
+            row + String.fromCharCode(column.charCodeAt(0) + 1) // Sağdaki koltuk
+        ];
+
+        // Yanındaki koltukların her birini kontrol et
+        for (var i = 0; i < adjacentSeats.length; i++) {
+            var adjacentSeat = adjacentSeats[i];
+            if (bookedSeats.hasOwnProperty(adjacentSeat)) {
+                var adjacentGender = bookedSeats[adjacentSeat];
+                if ((gender === "male" && adjacentGender === "female") || (gender === "female" && adjacentGender === "male")) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    // Koltuk numarasından sıra ve sütun bilgisini alma işlevi
+    function getSeatInfo(seatId) {
+        var match = seatId.match(/(\d+)([A-Z])/);
+        return {
             row: parseInt(match[1]),
             column: match[2]
-          };
-        }
+        };
+    }
 
-        // Yardımcı fonksiyon: Verilen iki koltuk numarasının yan yana olup olmadığını kontrol eder
-        function areSeatsAdjacent(seatId1, seatId2) {
-          const seat1Info = getSeatInfo(seatId1);
-          const seat2Info = getSeatInfo(seatId2);
-          // Yan yana olup olmadığını kontrol etmek için sıra numaralarını ve sütun harflerini karşılaştırıyoruz
-          return (
-            Math.abs(seat1Info.row - seat2Info.row) === 0 && // Aynı sıra
-            Math.abs(seat1Info.column.charCodeAt(0) - seat2Info.column.charCodeAt(0)) === 1 // Yan yana sütunlar
-          );
-        }
+    const maleCheckbox = document.getElementById('male');
+    const femaleCheckbox = document.getElementById('female');
+    const seats = document.querySelectorAll('.seat input[type="checkbox"]');
+    const bookButton = document.getElementById('bookButton');
 
-        maleCheckbox.addEventListener('change', function() {
-          if (this.checked) {
+    maleCheckbox.addEventListener('change', function() {
+        if (this.checked) {
             femaleCheckbox.checked = false;
             seats.forEach(seat => {
-              seat.addEventListener('change', function() {
-                if (this.checked) {
-                  this.parentElement.style.background = 'blue';
-                  const selectedGender = document.querySelector('input[name="gender"]:checked');
-                  if (selectedGender && selectedGender.value === 'female' && areSeatsAdjacent('1B', '1C')) {
-                    alert('Kadın ve erkek yan yana oturamaz!');
-                  }
-                } else {
-                  this.parentElement.style.background = 'greenyellow';
-                }
-              });
+                seat.addEventListener('change', function() {
+                    if (this.checked) {
+                        this.parentElement.style.background = 'blue';
+                    }
+                });
             });
-          }
-        });
+        }
+    });
 
-        femaleCheckbox.addEventListener('change', function() {
-          if (this.checked) {
+    femaleCheckbox.addEventListener('change', function() {
+        if (this.checked) {
             maleCheckbox.checked = false;
             seats.forEach(seat => {
-              seat.addEventListener('change', function() {
-                if (this.checked) {
-                  this.parentElement.style.background = 'pink';
-                  const selectedGender = document.querySelector('input[name="gender"]:checked');
-                  if (selectedGender && selectedGender.value === 'male' && areSeatsAdjacent('1B', '1C')) {
-                    alert('Kadın ve erkek yan yana oturamaz!');
-                  }
-                } else {
-                  this.parentElement.style.background = 'greenyellow';
-                }
-              });
+                seat.addEventListener('change', function() {
+                    if (this.checked) {
+                        this.parentElement.style.background = 'pink';
+                    }
+                });
             });
-          }
-        });
+        }
+    });
 
-      bookButton.addEventListener('click', function() {
-      const selectedSeat = document.querySelector('.seat input[type="checkbox"]:checked');
-      if (!selectedSeat) {
-          alert('Lütfen bir koltuk seçin.');
-          return;
-      }
+    bookButton.addEventListener('click', function() {
+        const selectedSeat = document.querySelector('.seat input[type="checkbox"]:checked');
+        if (!selectedSeat) {
+            alert('Lütfen bir koltuk seçin.');
+            return;
+        }
 
-      const seatLabel = selectedSeat.parentElement.textContent.trim();
-      const seatNumber = seatLabel.replace(/[^A-Za-z0-9]/g, '');
+        const seatLabel = selectedSeat.parentElement.textContent.trim();
+        const seatNumber = seatLabel.replace(/[^A-Za-z0-9]/g, '');
+        const routeId = "<?php echo $routeId; ?>";
 
+        const selectedGender = document.querySelector('input[name="gender"]:checked').value;
 
+        // Form oluştur
+        const form = document.createElement('form');
+        form.method = 'GET'; // GET metoduyla gönderim yapılacak
+        form.action = 'AddBooking.php'; // Formun gönderileceği dosya
 
-          const selectedGender = document.querySelector('input[name="gender"]:checked').value;
+        // Koltuk ve cinsiyeti gizli alan olarak forma ekle
+        const seatInput = document.createElement('input');
+        seatInput.type = 'hidden';
+        seatInput.name = 'seat'; 
+        seatInput.value = seatNumber;
+        form.appendChild(seatInput);
 
-          // Form oluştur
-          const form = document.createElement('form');
-          form.method = 'GET'; // GET metoduyla gönderim yapılacak
-          form.action = 'AddBooking.php'; // Formun gönderileceği dosya
+        const routeInput = document.createElement('input');
+        routeInput.type = 'hidden';
+        routeInput.name = 'route_id'; 
+        routeInput.value = routeId;
+        form.appendChild(routeInput);
 
-          // Koltuk ve cinsiyeti gizli alan olarak forma ekle
-          const seatInput = document.createElement('input');
-          seatInput.type = 'hidden';
-          seatInput.name = 'seat'; 
-          seatInput.value = seatNumber;
-          form.appendChild(seatInput);
+        const genderInput = document.createElement('input');
+        genderInput.type = 'hidden';
+        genderInput.name = 'gender';
+        genderInput.value = selectedGender;
+        form.appendChild(genderInput); 
 
-          const genderInput = document.createElement('input');
-          genderInput.type = 'hidden';
-          genderInput.name = 'gender';
-          genderInput.value = selectedGender;
-          form.appendChild(genderInput); 
-          // Formu sayfaya ekleyerek gönder
-          document.body.appendChild(form);
-          form.submit();
-      });
+        // Formu sayfaya ekleyerek gönder
+        document.body.appendChild(form);
+        form.submit();
+    });
 </script>
 
   
