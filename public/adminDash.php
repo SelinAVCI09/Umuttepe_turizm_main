@@ -192,7 +192,7 @@ button
       <th>ID</th>
     <th>Kalkış Şehri</th>
     <th>İniş Şehri</th>
-    <th>Otobüs İsmi</th>
+    <th>Peron</th>
     <th>Tarih</th>
     <th>Zaman</th>
     <th>Ücret</th>

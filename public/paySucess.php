@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <!--Subscribe to our Youtube channel "Coder ACB"-->

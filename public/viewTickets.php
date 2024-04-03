@@ -169,48 +169,42 @@ button
     echo "<tr>
     <th>Kalkış Şehri</th>
     <th>İniş Şehri</th>
-    <th>Otobüs Adı</th>
+    <th>Peron</th>
     <th>Tarih</th>
     <th>Zaman</th>
     <th>Ücret</th>
+    <th>PNR</th>
     
    
        </tr>";
-
-       while ($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC))
-       {
-        echo "</td><td>";
-        echo $row['via_city'];
-        echo "</td><td>";
-        echo $row['destination'];
-        echo "</td><td>";
-        echo $row['bus_name'];
-        echo "</td><td>";
-        echo $row['departure_date'];
-        echo "</td><td>";
-        echo $row['departure_time'];
-        echo "</td><td>";
-        echo $row['cost'];
-        echo "</td>";
+       $uniqueTickets = array(); // Tekil biletler için dizi
+       while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
+           // Biletin daha önce eklenip eklenmediğini kontrol et
+           if (!in_array($row['id'], $uniqueTickets)) {
+               echo "<tr>";
+               echo "<td>" . $row['via_city'] . "</td>";
+               echo "<td>" . $row['destination'] . "</td>";
+               echo "<td>" . $row['bus_name'] . "</td>";
+               echo "<td>" . $row['departure_date'] . "</td>";
+               echo "<td>" . $row['departure_time'] . "</td>";
+               echo "<td>" . $row['cost'] . "</td>";
+               echo "<td>";
+               echo '<button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">';
+               echo '<a href="pnr.php?id=' . $row['id'] . '">PNR KODU</a>';
+               echo "</button>";
+               echo "</td>";
+               echo "</tr>";
+               // Biletin bir kez eklendiğini işaretleyin
+               $uniqueTickets[] = $row['id'];
+           }
+       }
+       
+    
        
           
         ?>
-         <td>
-        <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
-          <a href="pnr.php?id=<?php echo $row['id'];?>">
-         
-          
-          
-          PNR KODU
-          
-          </a>
-
-        </button>
-       </td>
-
     
 <?php
-       }
 
        echo "</table>";
 

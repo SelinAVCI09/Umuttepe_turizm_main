@@ -9,27 +9,13 @@ session_start();
 ?>
 
 <?php include("connection.php")?>
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-  <title>admin Panel suraksha</title>
-</head>
-<body>
 
-   <a href="adminLogout.php"><button class="btnHome">logout</button></a>
-
-</body>
-</html>
-
--->
 
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>Rezerv sayfası</title>
-  <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
 <link rel="stylesheet" href="cssfile/signUp.css">
@@ -57,7 +43,6 @@ table
     width:99%;
     border-collapse: separate !important;
     margin:auto;
-    /*/table-layout:fixed;/*/
     text-align:center;
     margin-top:50px;
     background-color: rgb(255, 255, 255);
@@ -81,7 +66,6 @@ table tr td
 }
 table tr td a
 {
-    /*background-color: rgb(255, 196, 0);*/
     color: white;
     border-radius: 5px;
     padding: 6px;
@@ -93,13 +77,7 @@ table tr td a
 table tr td button:hover
 {
 
-  /*
-    background: rgb(255, 255, 255);
-    text-decoration:underline;
-    color:tomato;
-    padding: 4px;
-    border:2px solid tomato;
-    transition:background-color 0.2s;*/
+
 
     padding: 5px 5px 5px 5px;
   border: 2px solid yellow;
@@ -139,6 +117,31 @@ button
       color: black;
 
     }
+    .checkbox_label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkbox_text {
+  font-size: 16px;
+  color: #666;
+}
+
+.submit_button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #F9522E;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit_button:hover {
+  background-color: black;
+}
+
 
 
   </style>
@@ -164,21 +167,9 @@ button
     <li><a href="profile.php">Profil</a></li>
     <li><a href="viewTickets.php">Biletlerim</a></li>
     <li><a href="logout.php">Çıkış</a></li>
-    
-  <!--  <li><a href="#">Event</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Service</a></li>
-    <li><a href="#">Contact</a></li>-->
+ 
     </ul>
- <!--  <li>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-youtube"></i></a>
-        
-      </div>
-    </li>-->
+
    
 
 </div>
@@ -194,56 +185,7 @@ button
 
 <?php
 
-    /*
-    $sqlget="SELECT * FROM bus";
-    $sqldata=mysqli_query($conn,$sqlget) or die('error getting');
-    
 
-    echo "<table>";
-    echo "<tr>
-      <th>ID</th>
-    <th>Bus Name</th>
-    <th>Tel</th>
-    <th>Book Now</th>
-    
-   
-       </tr>";
-
-       while ($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC))
-       {
-        echo "<tr><td>";
-        echo $row['id'];
-        echo "</td><td>";
-        echo $row['Bus_Name'];
-        echo "</td><td>";
-        echo $row['Tel'];
-        echo "</td>";
-       
-          
-        ?>
-
-        <td>
-
-        <button style="border:2px solid yellow; border-radius:7px; background-color:red;color:white;">
-          <a href="Viewbooking.php">
-         
-          
-          
-
-          Book Now
-
-          </a>
-
-        </button>
-
-        </td></tr>
-
-<?php
-       }
-
-       echo "</table>";
-
-*/
 ?>
 
 <?php
@@ -307,7 +249,7 @@ button
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-    Geting A Ticket...
+    Rezerv
     </div>
 
     <form action="#" method="POST">
@@ -357,8 +299,15 @@ foreach ($seats as $seat) {
     echo "<input type='text' id='genderInput' name='gender' value='" . ($gender ?: '') . "' required>";
     echo "</div>";
 }
-?>
 
+?>
+  <div class="input_wrap">
+    <label class="checkbox_label">Ekstra Seçenekler:</label><br>
+    <input type="checkbox" id="1" name="student" value="student"><span class="checkbox_text">Öğrenci</span><br><a href="AddPay.php?id=<?php echo $row['id'];?>">
+    <input type="checkbox" id ="2" name="elderly" value="elderly"><span class="checkbox_text">65 Yaş Üstü</span><br><a href="AddPay.php?id=<?php echo $row['id'];?>">
+    <input type="checkbox" id="3" name="official" value="official"><span class="checkbox_text">Memur</span><br><a href="AddPay.php?id=<?php echo $row['id'];?>">
+  </div>
+  
 
 
 

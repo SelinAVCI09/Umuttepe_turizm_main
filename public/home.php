@@ -87,7 +87,7 @@
                   <br>
 
 
-                       <a href="signUp.php">     <button class="btnHome">Kayıt olun...</button></a>
+                  <a href="signUp.php"><button class="btnHome">Kayıt olun...</button></a>
 
 
 
@@ -96,16 +96,7 @@
 
   </div>
 
- <div class="section">
 
-                      <video autoplay loop muted class="section">
-                        
-                                  <source src="video/video.mp4" type="video/mp4">
-
-                      </video>
-
-
-</div><!--section-->
 
             
  

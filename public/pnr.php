@@ -150,7 +150,7 @@ button
 <div class="sidebar2">
 
 
-    <h1 class="adminTopic">Biletlerim</h1>
+    <h1 class="adminTopic">PNR Kodu</h1>
     
     <?php
     
@@ -165,19 +165,27 @@ button
 
     $result = mysqli_query($conn, $sql);
     echo "<table>";
-    echo "<tr>";
+    echo "<tr><td>";
 
     if (mysqli_num_rows($result) > 0) {
-        // Her bir route için PNR kodu oluşturma
-        while($row = mysqli_fetch_assoc($result)) {
-            echo "</td><td>";
-            $pnrCode = $row["plaka"] . $row["zaman"] . str_replace(array('.', ' ', ':'), '', $row["departure_date"] . $row["departure_time"]) . $row["bus_name"] . str_replace(' ', '', $row["Bus_Name"]);
-            echo "PNR Kodu: " . $pnrCode . "<br>";
-
-        }
-    } else {
-        echo "Route bulunamadı";
-    }
+      // İlk satır için tablo başlığını oluştur
+      echo "<table>";
+  
+      // Her bir route için PNR kodu oluşturma
+      echo "<tr><td>";
+      while($row = mysqli_fetch_assoc($result)) {
+          $pnrCode = $row["plaka"] . $row["zaman"] . str_replace(array('.', ' ', ':'), '', $row["departure_date"] . $row["departure_time"]) . $row["bus_name"] . str_replace(' ', '', $row["Bus_Name"]);
+          echo "PNR Kodu: " . $pnrCode . "<br>";
+          break;
+      }
+      echo "</td></tr>";
+  
+      // Tabloyu kapat
+      echo "</table>";
+  } else {
+      echo "Route bulunamadı";
+  }
+  
     echo "</table>";
 
     mysqli_close($conn);

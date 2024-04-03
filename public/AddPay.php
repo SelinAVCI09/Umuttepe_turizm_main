@@ -88,7 +88,7 @@ session_start();
 
                  <div class="inputBox">
                     <span>Ücret :</span>
-                    <input type="number" value="200.00" name="amount">
+                    <input type="number" value="1000.00" name="amount">
                 </div>
 
                 <div class="inputBox">
@@ -158,7 +158,7 @@ session_start();
     
         </div>
 
-        <input type="submit" value="proceed to checkout" class="submit-btn" name="checkout">
+        <input type="submit" value="ÖDEME YAP" class="submit-btn" name="checkout">
 
     </form>
 

@@ -226,7 +226,7 @@
         
         <div class="input_wrap">
 
-          <input type="submit" value="Update Route Now" class="submit_btn" name="routeUpdate">
+          <input type="submit" value="Rota Güncelle" class="submit_btn" name="routeUpdate">
 
         </div>
 

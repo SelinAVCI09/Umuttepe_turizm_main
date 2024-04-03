@@ -74,7 +74,7 @@ session_start();
 
   </head>
   <body>
-    <table></table>
+  <td>
     <p>
     <br>Sayın Müşterimiz,<br>
                         
@@ -104,11 +104,11 @@ session_start();
                         
                         Bu metin, KVKK kapsamında müşterilere kişisel verilerin nasıl işlendiği ve korunduğu hakkında bilgi vermektedir
     </p>
-    <table></table>
+    </td>
     <br>
     <div class="input_wrap">
   <form action="signUp.php" method="get">
-    <input type="submit" value="Kabul Ediyorum" class="submit_btn" style="background-color: orange;">
+    <input type="submit" value="Kabul Ediyorum" class="btnHome" >
   </form>
 </div>
 
