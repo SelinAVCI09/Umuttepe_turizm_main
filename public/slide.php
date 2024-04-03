@@ -13,7 +13,7 @@
 		<div class="overlay"></div>
 		<div class="inner">
 			<h3 class="subtitle">Otobüsünüzü seçin</h3>
-			<h2 class="title">sizin için en iyisi</h2>
+			<h2 class="title">Sizin için en iyisi</h2>
 			<a href="home.php" class="btn">Ana Sayfaya git</a>
 		</div>
 	</div>
@@ -22,17 +22,17 @@
 		<div class="overlay"></div>
 		<div class="inner">
 		<h3 class="subtitle">Otobüsünüzü seçin</h3>
-			<h2 class="title">sizin için en iyisi</h2>
-			<a href="home.php" class="btn">na Sayfaya git</a>
+			<h2 class="title">Sizin için en iyisi</h2>
+			<a href="home.php" class="btn">Ana Sayfaya git</a>
 		</div>
 	</div>
 
 	<div class="carousel-cell" style="background-image: url(image/3.jpg);">
 		<div class="overlay"></div>
 		<div class="inner">
-			<h3 class="subtitle">Ac</h3>
-			<h2 class="title">Ac Non Ac facility on your preference...</h2>
-			<a href="home.php" class="btn">na Sayfaya git</a>
+			<h3 class="subtitle">UT</h3>
+			<h2 class="title">Tercihinize göre Umuttepe Turizm</h2>
+			<a href="home.php" class="btn">Ana Sayfaya git</a>
 		</div>
 	</div>
 </div>

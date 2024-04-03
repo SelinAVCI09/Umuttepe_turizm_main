@@ -190,36 +190,36 @@
         
         <div class="input_wrap">
           <label for="title">Kalkış</label>
-          <input type="text" id="title" name="Via_city" placeholder="Via_city" required>
+          <input type="text" id="title" name="Via_city"  required>
         </div>
 
 
         <div class="input_wrap">
           <label for="title">İniş</label>
-          <input type="text" id="title" name="destination" placeholder="Destination" required>
+          <input type="text" id="title" name="destination" required>
         </div>
 
          <div class="input_wrap">
           <label for="title">Otobüs adı</label>
-          <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
+          <input type="text" id="title" name="bus_name" required>
         </div>
 
 
          <div class="input_wrap">
           <label for="title">Çıkış Tarihi</label>
-          <input type="Date" id="title" name="departure_date" placeholder="Departure Date" class="idclass">
+          <input type="Date" id="title" name="departure_date"  class="idclass">
         </div>
 
 
          <div class="input_wrap">
           <label for="title">Çıkış zamanı</label>
-          <input type="Time" id="title" name="departure_time" placeholder="Departure Time" class="idclass">
+          <input type="Time" id="title" name="departure_time"  class="idclass">
         </div>
 
 
           <div class="input_wrap">
           <label for="title">ÜCRET</label>
-          <input type="number" id="title" name="cost" placeholder="Cost" class="idclass">
+          <input type="number" id="title" name="cost"  class="idclass">
         </div>
 
 

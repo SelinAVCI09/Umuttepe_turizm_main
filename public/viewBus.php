@@ -241,13 +241,13 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>Via City</th>
-    <th>Destination</th>
-    <th>Bus Name</th>
-    <th>Departure Date</th>
-    <th>Departure Time</th>
-    <th>Cost</th>
-    <th>Booking</th>
+    <th>Kalkış</th>
+    <th>Varış</th>
+    <th>Peron</th>
+    <th>Tarih</th>
+    <th>Saat</th>
+    <th>Ücret</th>
+    <th>İncele</th>
     
    
        </tr>";

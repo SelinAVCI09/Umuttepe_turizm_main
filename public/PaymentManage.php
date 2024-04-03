@@ -17,7 +17,6 @@ session_start();
 </head>
 <body>
 
-   <?php// echo "welcome:".  $_SESSION['id']; ?>
    <a href="adminLogout.php"><button class="btnHome">logout</button></a>
 
 </body>
@@ -193,13 +192,13 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>Paid Amount</th>
-    <th>Paid Passenger Name</th>
+    <th>Ödenen Ücret</th>
+    <th>Kullanıcı Adı</th>
     <th>E-mail</th>
-    <th>address</th>
-    <th>city</th>
-    <th>Update/Edit</th>
-    <th>Delete</th>
+    <th>Adres</th>
+    <th>Şehir</th>
+    <th>Güncelle</th>
+    <th>Sil</th>
 
     
    

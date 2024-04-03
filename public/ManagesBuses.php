@@ -179,10 +179,10 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>bus_name</th>
-    <th>Tel Number</th>
-    <th>Update</th>
-    <th>Delete</th>
+    <th>Plaka</th>
+    <th>Telefon Numarası</th>
+    <th>Güncelle</th>
+    <th>Sil</th>
    
        </tr>";
 
