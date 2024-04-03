@@ -147,9 +147,14 @@ session_start();
           <label for="Confirm_password">Şifreyi tekrar giriniz</label>
           <input type="password" id="password" name="cpassword" placeholder="Şifre" required>
         </div>
+        <div class="input_wrap">
+          <input type="checkbox" id="kvkk" name="kvkk" required>
+          <label for="kvkk"> <u><a href="kvkk.php" target="_blank">kvkk</a></u> Dosyasını onaylayınız</label>
+        </div>
+
        
         <div class="input_wrap">
-          <input type="submit" value="Register Now" class="submit_btn">
+          <input type="submit" value="Kayıt Ol" class="submit_btn">
         </div>
 
       </div>

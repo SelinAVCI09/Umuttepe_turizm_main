@@ -82,7 +82,7 @@
              
 
 
-                  <h1 class="home_details">İstediğiniz zaman otobüs <br><font class="font">Her yerde....</font>
+                  <h1 class="home_details">İstediğiniz zaman otobüs <br>
 
                   <br>
 
