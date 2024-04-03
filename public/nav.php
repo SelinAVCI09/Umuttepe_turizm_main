@@ -4,15 +4,14 @@
         <li class="btn"><span class="fas fa-bars"></span></li>
         <div class="items">
           <li><a href="home.php">Ana sayfa</a></li>
-          <li><a href="qr.html">QR</a></li>
+          <li><a href="qr.html">Rota hesplama</a></li>
        <!--   <li><a href="#">Ticket Book</a></li>-->
 
          
          <!-- <li><a href="#">Packages</a></li>-->
           <li><a href="loginMenu.php">Giriş</a></li>
-          <li><a href="AboutUs.php">Bizim Hakkımızda</a></li>
            <li><a href="contact_us.php">İletişime Geçin</a></li>
-            <li><a href="slide.php">Servisler</a></li>
+
 
 
         </div>

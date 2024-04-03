@@ -84,7 +84,7 @@ session_start();
 
             <div class="col">
 
-                <h3 class="title">billing address</h3>
+                <h3 class="title">Ücretlendirme</h3>
 
                  <div class="inputBox">
                     <span>Ücret :</span>
@@ -101,22 +101,22 @@ session_start();
                     <input type="email" value="<?php echo $user_data['email'];?>" name="email">
                 </div>
                 <div class="inputBox">
-                    <span>address :</span>
+                    <span>Adres :</span>
                     <input type="text" name="address">
                 </div>
                 <div class="inputBox">
-                    <span>city :</span>
-                    <input type="text" placeholder="türkiye" name="city">
+                    <span>Ülke :</span>
+                    <input type="text" placeholder="Türkiye" name="city">
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
-                        <span>state :</span>
-                        <input type="text" placeholder="türkiye" name="state">
+                        <span>Şehir :</span>
+                        <input type="text" placeholder="" name="state">
                     </div>
                     <div class="inputBox">
-                        <span>zip code :</span>
-                        <input type="text" placeholder="123 456" name="zip">
+                        <span>Zip kodu :</span>
+                        <input type="text" placeholder="" name="zip">
                     </div>
                 </div>
 
@@ -132,25 +132,25 @@ session_start();
                 </div>
                 <div class="inputBox">
                     <span>Kart ismi :</span>
-                    <input type="text" placeholder="mr. john deo" name="cardName" required>
+                    <input type="text" placeholder="" name="cardName" required>
                 </div>
                 <div class="inputBox">
                     <span>Kredi kartı numarası :</span>
-                    <input type="number" placeholder="1111-2222-3333-4444" name="cardNumber" required>
+                    <input type="number" placeholder="" name="cardNumber" required>
                 </div>
                 <div class="inputBox">
                     <span>Bitiş Ayı:</span>
-                    <input type="text" placeholder="january" name="expM" required>
+                    <input type="text" placeholder="" name="expM" required>
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>Bitiş Yılı :</span>
-                        <input type="number" placeholder="2022" name="expYear" required>
+                        <input type="number" placeholder="" name="expYear" required>
                     </div>
                     <div class="inputBox">
                         <span>CVV :</span>
-                        <input type="text" placeholder="1234" name="cvv" required>
+                        <input type="text" placeholder="" name="cvv" required>
                     </div>
                 </div>
 

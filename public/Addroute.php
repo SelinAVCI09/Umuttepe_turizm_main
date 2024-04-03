@@ -85,7 +85,7 @@
  <li><a href="adminDash.php">Rota Kontrolü</a></li>
     <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
     <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
+    <li><a href="PaymentManage.php">Ücret işlemleri tamamlananlar</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -195,7 +195,7 @@
         </div>
 
         <div class="input_wrap">
-          <label for="title">Fİyat</label>
+          <label for="title">Fiyat</label>
           <input type="text" id="title" name="cost" placeholder="Cost" class="idclass" required>
         </div>
         

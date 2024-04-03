@@ -150,6 +150,7 @@ button
 
     <li><a href="viewBus.php">Bilet Rezervi</a></li>
     <li><a href="profile.php">Profil</a></li>
+    <li><a href="viewTickets.php">Biletlerim</a></li>
     <li><a href="logout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -241,13 +242,13 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>Kalkış</th>
-    <th>Varış</th>
-    <th>Peron</th>
+    <th>Kallkış Şehri </th>
+    <th>İniş Şehri</th>
+    <th>Otobüs İsmi</th>
     <th>Tarih</th>
-    <th>Saat</th>
+    <th>Zaman</th>
     <th>Ücret</th>
-    <th>İncele</th>
+    <th>Rezerv</th>
     
    
        </tr>";

@@ -96,13 +96,13 @@ session_start();
         }
         else{
 
-             echo "Please enter confirm password as previous one!!";
+             echo "PGiridiğiniz şifre aynı değil tekrar deneyiniz!";
 
           }
     }
     else{
     
-         echo "Please enter some valid information!";
+         echo "Gerekli bilgileri ekleyiniz!";
 
       }
   }
@@ -124,11 +124,11 @@ session_start();
         <div class="input_grp">
           <div class="input_wrap">
             <label for="fname">İsminiz</label>
-            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            <input type="text" id="fname" name="fname" placeholder="İsim" required>
           </div>
           <div class="input_wrap">
             <label for="lname">Soyisminiz</label>
-            <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            <input type="text" id="lname" name="lname" placeholder="Soyisim" required>
           </div>
         </div>
         <div class="input_wrap">
@@ -137,15 +137,15 @@ session_start();
         </div>
         <div class="input_wrap">
           <label for="uname">Kullanıcı Adınız</label>
-          <input type="text" id="uname" name="user_name" placeholder="Username" required>
+          <input type="text" id="uname" name="user_name" placeholder="Kullanıcı adı" required>
         </div>
         <div class="input_wrap">
           <label for="password">Şifre</label>
-          <input type="password" id="password" name="password" placeholder="password" required>
+          <input type="password" id="password" name="password" placeholder="Şifre" required>
         </div>
         <div class="input_wrap">
           <label for="Confirm_password">Şifreyi tekrar giriniz</label>
-          <input type="password" id="password" name="cpassword" placeholder="password" required>
+          <input type="password" id="password" name="cpassword" placeholder="Şifre" required>
         </div>
        
         <div class="input_wrap">

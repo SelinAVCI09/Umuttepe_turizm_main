@@ -147,10 +147,10 @@ button
 <ul>
 
 
-<li><a href="adminDash.php">Rota Kontrolü</a></li>
-    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
-    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
+<li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
     
   <!--  <li><a href="#">Event</a></li>
@@ -189,15 +189,15 @@ button
 
     echo "<table>";
     echo "<tr>
-    <th>ID</th>
-    <th>Kalkış</th>
-    <th>Varış</th>
-    <th>Peron</th>
+      <th>ID</th>
+    <th>Kalkış Şehri</th>
+    <th>İniş Şehri</th>
+    <th>Otobüs İsmi</th>
     <th>Tarih</th>
-    <th>Saat</th>
+    <th>Zaman</th>
     <th>Ücret</th>
-    <th>Güncelle</th>
-    <th>Sil</th>
+    <th>Güncelleme</th>
+    <th>Silme</th>
    
        </tr>";
 

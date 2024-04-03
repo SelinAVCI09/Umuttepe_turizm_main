@@ -10,17 +10,7 @@ session_start();
 
 <?php include("connection.php")?>
 <!--
-<!DOCTYPE html>
-<html>
-<head>
-  <title>admin Panel suraksha</title>
-</head>
-<body>
-
-   <a href="adminLogout.php"><button class="btnHome">logout</button></a>
-
-</body>
-</html>
+<
 
 -->
 
@@ -28,7 +18,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ödeme Kabul EDİLDİ!!!</title>
+  <title>Ödeme İşlemleri</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -149,10 +139,10 @@ button
 
 
     
-<li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
-    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
-    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
-    <li><a href="PaymentManage.php">Transfer</a></li>
+<li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
 
   <!--  <li><a href="#">Event</a></li>
@@ -192,13 +182,13 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>Ödenen Ücret</th>
-    <th>Kullanıcı Adı</th>
+    <th>Ücret</th>
+    <th>İsim</th>
     <th>E-mail</th>
     <th>Adres</th>
     <th>Şehir</th>
     <th>Güncelle</th>
-    <th>Sil</th>
+    <th>Silme</th>
 
     
    

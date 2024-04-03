@@ -163,7 +163,7 @@
 
           else{
 
-               echo '<script type="text/javascript">alert("Booking not updated!!!")</script>';
+               echo '<script type="text/javascript">alert("Güncelleme başarılı değil!!!")</script>';
            }
 
            
@@ -199,13 +199,13 @@
         
         <div class="input_wrap">
           <label for="title">Passenger Name</label>
-          <input type="text" id="title" name="passenger_name" placeholder="Passenger Name" required>
+          <input type="text" id="title" name="passenger_name" placeholder="Kullanıcı ismi" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Telephone</label>
-          <input type="text" id="title" name="tel" placeholder="Tel" required>
+          <label for="title">Telefon</label>
+          <input type="text" id="title" name="tel" placeholder="Telefon" required>
         </div>
 
         <div class="input_wrap">
@@ -215,12 +215,12 @@
 
         <div class="input_wrap">
           <label for="title">Kalkış yeri</label>
-          <input type="text" id="title" name="board_place" placeholder="board place" required>
+          <input type="text" id="title" name="board_place" placeholder="" required>
         </div>
 
         <div class="input_wrap">
           <label for="title">İniş Yeri</label>
-          <input type="text" id="title" name="Your_destination" placeholder="Your destination" required>
+          <input type="text" id="title" name="Your_destination" placeholder="" required>
         </div>
 
 

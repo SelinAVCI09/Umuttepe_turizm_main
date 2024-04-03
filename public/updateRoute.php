@@ -92,10 +92,10 @@
 
 
    
-<li><a href="adminDash.php">Rota Kontrolü</a></li>
-    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
-    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
+<li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -152,14 +152,14 @@
 
                  
 */
-           echo '<script type="text/javascript">alert("Route udated sucessfully!!!")</script>';
+           echo '<script type="text/javascript">alert("Başarılı!!!")</script>';
 
 
           }
 
           else{
 
-               echo '<script type="text/javascript">alert("Route not updated!!!")</script>';
+               echo '<script type="text/javascript">alert("Başarısız!!!")</script>';
            }
 
            
@@ -190,36 +190,36 @@
         
         <div class="input_wrap">
           <label for="title">Kalkış</label>
-          <input type="text" id="title" name="Via_city"  required>
+          <input type="text" id="title" name="Via_city" placeholder="Kalkış şehri" required>
         </div>
 
 
         <div class="input_wrap">
           <label for="title">İniş</label>
-          <input type="text" id="title" name="destination" required>
+          <input type="text" id="title" name="destination" placeholder="İniş şehri" required>
         </div>
 
          <div class="input_wrap">
           <label for="title">Otobüs adı</label>
-          <input type="text" id="title" name="bus_name" required>
+          <input type="text" id="title" name="bus_name" placeholder="Otobüs adı" required>
         </div>
 
 
          <div class="input_wrap">
           <label for="title">Çıkış Tarihi</label>
-          <input type="Date" id="title" name="departure_date"  class="idclass">
+          <input type="Date" id="title" name="departure_date" placeholder="Çıkış Tarihi" class="idclass">
         </div>
 
 
          <div class="input_wrap">
           <label for="title">Çıkış zamanı</label>
-          <input type="Time" id="title" name="departure_time"  class="idclass">
+          <input type="Time" id="title" name="departure_time" placeholder="Çıkış Tarihi" class="idclass">
         </div>
 
 
           <div class="input_wrap">
           <label for="title">ÜCRET</label>
-          <input type="number" id="title" name="cost"  class="idclass">
+            <input type="number" id="title" name="cost" placeholder="Ücret" class="idclass">
         </div>
 
 

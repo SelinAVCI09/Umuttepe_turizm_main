@@ -105,7 +105,7 @@ body{
            //echo '<script type="text/javascript">alert("profile udated sucessfully!!!")</script>';
 
                     echo ("<script LANGUAGE='JavaScript'>
-    window.alert('Succesfully your profile updated!!!');
+    window.alert('Başarılı!!!');
     window.location.href='profile.php';
     </script>");
 
@@ -114,7 +114,7 @@ body{
 
           else{
 
-               echo '<script type="text/javascript">alert("profile not updated!!!")</script>';
+               echo '<script type="text/javascript">alert("Başarısız!!!")</script>';
            }
 
            
@@ -137,12 +137,12 @@ body{
         <div class="input_grp">
           <div class="input_wrap">
             <label for="fname">İsminiz</label>
-            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            <input type="text" id="fname" name="fname" placeholder="İsminiz" required>
           </div>
 
           <div class="input_wrap">
             <label for="lname">Soyisminiz</label>
-            <input type="text" id="lname" name="lname" placeholder="Last Name" >
+            <input type="text" id="lname" name="lname" placeholder="Soyisminiz" >
           </div>
         </div>
 
@@ -157,11 +157,11 @@ body{
         </div>
         <div class="input_wrap">
           <label for="uname">Kullanıcı Adınız</label>
-          <input type="text" id="uname" name="user_name" placeholder="Username" required>
+          <input type="text" id="uname" name="user_name" placeholder="Kullanıcı ismi" required>
         </div>
         <div class="input_wrap">
           <label for="password">Şifreniz</label>
-          <input type="password" id="password" name="password" placeholder="password" required>
+          <input type="password" id="password" name="password" placeholder="Şifre" required>
         </div>
         
        

@@ -28,7 +28,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <title>booking page</title>
+  <title>Rezerv sayfası</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -160,8 +160,9 @@ button
 
 
 
-    <li><a href="viewBus.php">Bilet Rezervasyonu</a></li>
+<li><a href="viewBus.php">Bilet Rezervi</a></li>
     <li><a href="profile.php">Profil</a></li>
+    <li><a href="viewTickets.php">Biletlerim</a></li>
     <li><a href="logout.php">Çıkış</a></li>
     
   <!--  <li><a href="#">Event</a></li>
@@ -314,13 +315,13 @@ button
         
         <div class="input_wrap">
           <label for="title">Yolcu Adı</label>
-          <input type="text" id="title" name="passenger_name" placeholder="Passenger Name" required>
+          <input type="text" id="title" name="passenger_name" placeholder="Yolcu adı" required>
         </div>
 
 
         <div class="input_wrap">
           <label for="title">Telefon</label>
-          <input type="text" id="title" name="tel" placeholder="Tel" required>
+          <input type="text" id="title" name="tel" placeholder="Telefon" required>
         </div>
 
         <div class="input_wrap">

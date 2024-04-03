@@ -135,7 +135,7 @@ a:nth-child(4){
   15px 15px 15px  rgba(0, 0, 0, 0.1),
   inset -5px -15px 15px  rgba(255, 255, 255, 0.2),
   inset 5px 5px 5px  rgba(0, 0, 0, 0.2);
-
+  background-color: #0B0B3B;
 
 
   
@@ -163,9 +163,10 @@ a:nth-child(4){
   margin-left:auto;
   /*background-color: rgba(0, 0, 0, 1.0);*/
   color: #fff;
-  padding: 0px 200px;
+  padding: 0px 35px;
   position: relative;
   font-size: 15px;
+  
 }
 hr{
   border:1px solid black;
@@ -404,29 +405,30 @@ li a:hover{
                   <br>
                   <a href="viewBus.php"><button class="btn4">Ana sayfa </button></a>
               </div>
+              <div class="right">
+
+                  
+<h3>Hesap Bilgileri</h3><hr/><br/>  
+     <p>Kullanıcı Adı:- <?php echo $user_data['username'];?>   </p><br>
+     <p>Email:- <?php echo $user_data['email'];?> </p>
+     <br>
+     <p>İsiminiz:-<?php echo $user_data['First_Name'];?></p><br>
+     <p>Soyisiminiz:-<?php echo $user_data['Last_Name'];?></p><br>
+     
+     <h3>Çıkış/Güvenlik</h3><hr/><br>
+     <br><a href="updateProfile.php?id=<?php echo $user_data['id'];?>">
+     <button class="btn3">Güncelle</button></a>
+     <a href="logout.php">
+     <button class="btn3">Çıkış</button></a>
+     <a href="deleteProfile.php?id=<?php echo $user_data['id'];?>">
+     <button class="btn3">Sil</button></a>
+</div>
               </div>
 
 
 
 <!--information-->
-        <div class="right">
-
-                  
-           <h3>Hesap Bilgileri</h3><hr/><br/>  
-                <p>Kullanıcı Adı:- <?php echo $user_data['username'];?>   </p><br>
-                <p>Email:- <?php echo $user_data['email'];?> </p>
-                <br>
-                <p>İsiminşz:-<?php echo $user_data['First_Name'];?></p><br>
-                <p>Soyisiminiz:-<?php echo $user_data['Last_Name'];?></p><br>
-                
-                <h3>Çıkış/Güvenlik</h3><hr/><br>
-                <br><a href="updateProfile.php?id=<?php echo $user_data['id'];?>">
-                <button class="btn3">Güncelle</button></a>
-                <a href="logout.php">
-                <button class="btn3">Çıkış</button></a>
-                <a href="deleteProfile.php?id=<?php echo $user_data['id'];?>">
-                <button class="btn3">Sil</button></a>
-         </div>
+      
           <!--
          <div class="nxdiv">
            <h3>Security offtion</h3>

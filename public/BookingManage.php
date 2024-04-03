@@ -153,10 +153,10 @@ button
     <li><a href="PaymentManage.php">Payment Manage</a></li>
     <li><a href="profile.php">Profile</a></li>-->
 
-    <li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
-    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
-    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
-    <li><a href="PaymentManage.php">Transfer</a></li>
+    <li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
    
   <!--  <li><a href="logout.php">logout</a></li>-->
@@ -183,7 +183,7 @@ button
 <div class="sidebar2">
 
 
-    <h1 class="adminTopic">Rezerve edilmiş insanlar</h1>
+    <h1 class="adminTopic">Rezerve işlemleri bitmiş müşterilerr</h1>
 
 
 

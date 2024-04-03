@@ -27,7 +27,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Routes adding</title>
+  <title>Rota ekleme</title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -178,13 +178,13 @@
         
         <div class="input_wrap">
           <label for="title">Otobüs adı</label>
-          <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
+          <input type="text" id="title" name="bus_name" placeholder="Otobüs Adı" required>
         </div>
 
 
         <div class="input_wrap">
           <label for="title">Telefon</label>
-          <input type="text" id="title" name="tel" placeholder="Tel" required>
+          <input type="text" id="title" name="tel" placeholder="Telefon" required>
         </div>
 
         <div class="input_wrap">

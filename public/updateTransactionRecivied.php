@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel S</title>
+  <title>Admin Panel </title>
   <!--cdn icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="cssfile/sidebar.css">
@@ -89,11 +89,10 @@
 </header>
 <ul>
 
-
-<li><a href="adminDash.php">Rota Kontrolü</a></li>
-    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
-    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
+<li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -151,7 +150,7 @@
                  
 */
               echo ("<script LANGUAGE='JavaScript'>
-    window.alert('Succesfully Transaction Updated!!!');
+    window.alert('Başarılı!!!');
     window.location.href='PaymentManage.php';
     </script>");
 
@@ -163,7 +162,7 @@
 
           else{
 
-               echo '<script type="text/javascript">alert("Booking not updated!!!")</script>';
+               echo '<script type="text/javascript">alert("Başarısız!!!")</script>';
            }
 
            
@@ -199,18 +198,18 @@
 
         <div class="input_wrap">
           <label for="title">Fiyat</label>
-          <input type="number" id="title" name="amount" placeholder="Paid Amount" class="idclass" required>
+          <input type="number" id="title" name="amount" placeholder="Fiyat" class="idclass" required>
         </div>
         
         <div class="input_wrap">
           <label for="title">İsim</label>
-          <input type="text" id="title" name="name" placeholder="Passenger Name" required>
+          <input type="text" id="title" name="name" placeholder="İsim" required>
         </div>
 
 
         <div class="input_wrap">
           <label for="title">Adres</label>
-          <input type="text" id="title" name="address" placeholder="Address" >
+          <input type="text" id="title" name="addres" placeholder="Address" >
         </div>
 
         <div class="input_wrap">
@@ -220,7 +219,7 @@
 
         <div class="input_wrap">
           <label for="title">Şehir</label>
-          <input type="text" id="title" name="city" placeholder="board place" required>
+          <input type="text" id="title" name="city" placeholder="Şehi" required>
         </div>
 
         <div class="input_wrap">

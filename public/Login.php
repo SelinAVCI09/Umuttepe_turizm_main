@@ -127,7 +127,7 @@ session_start();
             <input type="text" name="user_name" placeholder="Kullanıcı adınızı giriniz">
             <p>Şifre</p>
             <input type="password" name="password" placeholder="Şifrenizi giriniz">
-            <input type="submit" name="login" value="Login">
+            <input type="submit" name="login" value="Giriş">
             <a href="signUp.php" class="sign_up">Giriş Yapın</a>&nbsp&nbsp&nbsp
               
             </form>

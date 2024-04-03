@@ -34,11 +34,11 @@
 <!--  -->
                     <div class="socialInfo">
                         <div class="mainTitle">
-                            <h4> Our Health <span></span></h4>
+                            <h4> Bize ulaşın <span></span></h4>
                         </div>
                         <div class="socialItem">
                             <a href="#"> Sizler için varız</a>
-                            <a href="#"> Sizler için varız</a>
+                            <a href="#"> Konforlu hizmet</a>
                             <a href="#"> Sizler için varız </a>
                             <a href="#"> tSizler için varız </a>
                         </div>
@@ -46,11 +46,11 @@
 <!--  -->
                     <div class="socialInfo">
                         <div class="mainTitle">
-                            <h4> Address <span></span></h4>
+                            <h4> Adres <span></span></h4>
                         </div>
                         <h5 class="addressTitle"> Türkiye - Hudson Yards</h5>
                         <div class="callInfo">
-                            <h6>Call</h6> <i class="fas fa-arrow-right"></i>
+                            <h6>Ara</h6> <i class="fas fa-arrow-right"></i>
                             <span>+901585358</span>
                         </div>
                     </div>

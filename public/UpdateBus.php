@@ -91,10 +91,11 @@
 <ul>
 
 
-<li><a href="adminDash.php">Rota Kontrolü</a></li>
-    <li><a href="ManagesBuses.php">Otobüs kontrolü</a></li>
-    <li><a href="BookingManage.php">Rezerv İşlemleri</a></li>
-    <li><a href="PaymentManage.php">Transaction</a></li>
+
+<li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -148,7 +149,7 @@
 */
            
                                  echo ("<script LANGUAGE='JavaScript'>
-                      window.alert('Succesfully Bus updated!!!');
+                      window.alert('Başarılı!!!');
                       window.location.href='ManagesBuses.php';
                       </script>");
                
@@ -158,7 +159,7 @@
 
           else{
 
-               echo '<script type="text/javascript">alert("Not Updated!!!")</script>';
+               echo '<script type="text/javascript">alert("Başarısız!!!")</script>';
            }
 
            
@@ -180,7 +181,7 @@
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-      Otobüs Update/Edit
+      Otobüs Güncelleme
     </div>
 
     <form action="#" method="POST">
@@ -193,13 +194,13 @@
         
         <div class="input_wrap">
           <label for="title">Otobüs Adı</label>
-          <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
+          <input type="text" id="title" name="bus_name" placeholder="Otobüs Adı" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Telepfon</label>
-          <input type="text" id="title" name="tel" placeholder="Tel" required>
+          <label for="title">Telefon</label>
+          <input type="text" id="title" name="tel" placeholder="Telefon" required>
         </div>
 
        

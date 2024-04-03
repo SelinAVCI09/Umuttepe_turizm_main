@@ -137,10 +137,10 @@ button
 
 
    
-<li><a href="adminDash.php">Rotanızı ayarlayın</a></li>
-    <li><a href="ManagesBuses.php">Rotanızı ayarlayın</a></li>
-    <li><a href="BookingManage.php">Rezerve edilmiş insanlar</a></li>
-    <li><a href="PaymentManage.php">Transfer</a></li>
+<li><a href="adminDash.php">Rotanızı ayarlama</a></li>
+    <li><a href="ManagesBuses.php">Rota güncelleme</a></li>
+    <li><a href="BookingManage.php">Rezervarsoynu tamamlanan müşteriler </a></li>
+    <li><a href="PaymentManage.php">Ücretlendirme işlemleri bitmiş müşteriler</a></li>
     <li><a href="adminLogout.php">Çıkış</a></li>
   <!--  <li><a href="#">Event</a></li>
     <li><a href="#">About</a></li>
@@ -179,10 +179,10 @@ button
     echo "<table>";
     echo "<tr>
       <th>ID</th>
-    <th>Plaka</th>
-    <th>Telefon Numarası</th>
-    <th>Güncelle</th>
-    <th>Sil</th>
+    <th>Otobüs ismi</th>
+    <th>Telefon numarası</th>
+    <th>Güncelleme</th>
+    <th>Silme</th>
    
        </tr>";
 
@@ -237,7 +237,7 @@ button
 <br>
 
 
-                       <a href="AddBus.php">     <button class="btnPolicy">Add Bus</button></a>
+                       <a href="AddBus.php">     <button class="btnPolicy">Otobüs Ekle</button></a>
 
 
 
