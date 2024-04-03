@@ -185,7 +185,7 @@
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-    Update Passenger Booking...
+    Güncelle
     </div>
 
     <form action="#" method="POST">
@@ -198,12 +198,12 @@
         </div>
 
         <div class="input_wrap">
-          <label for="title">Paid Amount</label>
+          <label for="title">Fiyat</label>
           <input type="number" id="title" name="amount" placeholder="Paid Amount" class="idclass" required>
         </div>
         
         <div class="input_wrap">
-          <label for="title">Paid Passenger Name</label>
+          <label for="title">İsim</label>
           <input type="text" id="title" name="name" placeholder="Passenger Name" required>
         </div>
 

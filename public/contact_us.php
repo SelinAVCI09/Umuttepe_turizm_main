@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Suraksha Insurance solutions</title>
+    <title></title>
     <link rel="stylesheet" href="cssfile/nav.css">
     <link rel="stylesheet" href="cssfile/footer_l.css">
      <link rel="stylesheet" href="cssfile/contact_us.css">
@@ -59,7 +59,7 @@
         <p>En son haberler için takipte kalın</p><br>
 
         <!--first Heading -->
-        <h4>Adre</h4>
+        <h4>Adres</h4>
          <span>Türkiye</span>
          <hr><br><br>
 

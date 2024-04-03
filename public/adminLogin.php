@@ -8,7 +8,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>NZfare Admin Login</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="cssfile/nav.css">
     <link rel="stylesheet" href="cssfile/footer_l.css">
     <!--  <link rel="stylesheet" type="text/css" href="cssfile/container.css">-->

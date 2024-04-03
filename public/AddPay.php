@@ -87,17 +87,17 @@ session_start();
                 <h3 class="title">billing address</h3>
 
                  <div class="inputBox">
-                    <span>Amount You Pay :</span>
+                    <span>Ücret :</span>
                     <input type="number" value="200.00" name="amount">
                 </div>
 
                 <div class="inputBox">
-                    <span>Name :</span>
+                    <span>İsim Soyisim :</span>
                     <input type="text" value="<?php echo $user_data['username'];?>" name="name">
                 </div>
 
                 <div class="inputBox">
-                    <span>email :</span>
+                    <span>Email :</span>
                     <input type="email" value="<?php echo $user_data['email'];?>" name="email">
                 </div>
                 <div class="inputBox">
@@ -106,13 +106,13 @@ session_start();
                 </div>
                 <div class="inputBox">
                     <span>city :</span>
-                    <input type="text" placeholder="mumbai" name="city">
+                    <input type="text" placeholder="türkiye" name="city">
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>state :</span>
-                        <input type="text" placeholder="india" name="state">
+                        <input type="text" placeholder="türkiye" name="state">
                     </div>
                     <div class="inputBox">
                         <span>zip code :</span>

@@ -96,7 +96,7 @@
 
 
 
-<h1 class="loginMenu">LOGIN MENU</h1>
+<h1 class="loginMenu">Giriş Menüsü</h1>
 
    <div class="box">
 
@@ -104,7 +104,7 @@
 
              <div class="box1">
 
-             	<h1 class="menu">User Login</h1>
+             	<h1 class="menu">Kullanıcı Girişi</h1>
 
              </div>
       </a>
@@ -113,7 +113,7 @@
 
              <div class="box2">
 
-             	<h1 class="menu">Admin Login</h1>
+             	<h1 class="menu">Admin Girişi</h1>
 
 
              </div>

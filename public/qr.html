@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR ile Yönlendirme</title>
+    <!-- QR kodu oluşturmak için JavaScript kütüphanesi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    <!-- QR kodunu gösterecek yer -->
+    <div id="qr_kodu"></div>
+
+    <script>
+        // Sayfa yüklendiğinde QR kodu oluşturacak fonksiyon
+        document.addEventListener("DOMContentLoaded", function() {
+            qrKoduOlustur("home.php");
+        });
+
+        // QR kodu oluşturmak için fonksiyon
+        function qrKoduOlustur(url) {
+            // QR kodunu oluştur
+            var qr = new QRious({
+                element: document.getElementById('qr_kodu'),
+                size: 200,
+                value: url
+            });
+
+            // QR koduna tıklandığında yönlendirme yap
+            document.getElementById('qr_kodu').onclick = function() {
+                window.location.href = url;
+            };
+        }
+    </script>
+</body>
+</html>

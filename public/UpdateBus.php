@@ -192,13 +192,13 @@
         </div>
         
         <div class="input_wrap">
-          <label for="title">Bus Name</label>
+          <label for="title">Otobüs Adı</label>
           <input type="text" id="title" name="bus_name" placeholder="Bus Name" required>
         </div>
 
 
         <div class="input_wrap">
-          <label for="title">Telephone</label>
+          <label for="title">Telepfon</label>
           <input type="text" id="title" name="tel" placeholder="Tel" required>
         </div>
 

@@ -4,7 +4,7 @@
         <li class="btn"><span class="fas fa-bars"></span></li>
         <div class="items">
           <li><a href="home.php">Ana sayfa</a></li>
-          <li><a href="help.php">Yardım</a></li>
+          <li><a href="qr.html">QR</a></li>
        <!--   <li><a href="#">Ticket Book</a></li>-->
 
          

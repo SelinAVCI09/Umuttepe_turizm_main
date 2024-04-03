@@ -177,7 +177,7 @@
           <div class="wrapper">
   <div class="registration_form">
     <div class="title">
-      Bus Route Update/Edit
+     Otobüs Değişimi
     </div>
 
     <form action="#" method="POST">

@@ -25,10 +25,10 @@
                             <h4> Service <span></span></h4>
                         </div>
                         <div class="socialItem">
-                            <a href="#"> Emergency dental care </a>
-                            <a href="#"> check up</a>
-                            <a href="#"> treatment of personal diseases </a>
-                            <a href="#"> tooth extraction </a>
+                            <a href="#"> Sizler için varız </a>
+                            <a href="#"> Sizler için varız</a>
+                            <a href="#"> Sizler için varız </a>
+                            <a href="#"> Sizler için varız </a>
                         </div>
                     </div>
 <!--  -->
@@ -37,10 +37,10 @@
                             <h4> Our Health <span></span></h4>
                         </div>
                         <div class="socialItem">
-                            <a href="#"> Emergency dental care </a>
-                            <a href="#"> check up</a>
-                            <a href="#"> treatment of personal diseases </a>
-                            <a href="#"> tooth extraction </a>
+                            <a href="#"> Sizler için varız</a>
+                            <a href="#"> Sizler için varız</a>
+                            <a href="#"> Sizler için varız </a>
+                            <a href="#"> tSizler için varız </a>
                         </div>
                     </div>
 <!--  -->
@@ -48,10 +48,10 @@
                         <div class="mainTitle">
                             <h4> Address <span></span></h4>
                         </div>
-                        <h5 class="addressTitle">New York - Hudson Yards</h5>
+                        <h5 class="addressTitle"> Türkiye - Hudson Yards</h5>
                         <div class="callInfo">
                             <h6>Call</h6> <i class="fas fa-arrow-right"></i>
-                            <span>+021585358</span>
+                            <span>+901585358</span>
                         </div>
                     </div>
 
